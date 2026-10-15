@@ -1,0 +1,2360 @@
+{
+  "tile": 8,
+  "variant": "compiler_default",
+  "timestamp": "2026-10-03T17:21:02.818486+00:00",
+  "process_id": 15300,
+  "result": "PASS",
+  "samples": [
+    {
+      "kernel_ms": 3.40268,
+      "h2d_ms": 0.38239999999999996,
+      "d2h_ms": 0.44576,
+      "end_to_end_ms": 5.4694,
+      "events": {
+        "write_a": {
+          "start_ns": 4920712034960,
+          "end_ns": 4920712244080,
+          "latency_ms": 0.20912
+        },
+        "write_b": {
+          "start_ns": 4920712317920,
+          "end_ns": 4920712491200,
+          "latency_ms": 0.17328
+        },
+        "kernel": {
+          "start_ns": 7603944261160,
+          "end_ns": 7603947663840,
+          "latency_ms": 3.40268
+        },
+        "read_c": {
+          "start_ns": 4920716559640,
+          "end_ns": 4920717005400,
+          "latency_ms": 0.44576
+        }
+      },
+      "iteration": 1,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.73668,
+      "h2d_ms": 0.5949599999999999,
+      "d2h_ms": 0.2472,
+      "end_to_end_ms": 5.8508,
+      "events": {
+        "write_a": {
+          "start_ns": 4920986864530,
+          "end_ns": 4920987119250,
+          "latency_ms": 0.25472
+        },
+        "write_b": {
+          "start_ns": 4920987166370,
+          "end_ns": 4920987506610,
+          "latency_ms": 0.34024
+        },
+        "kernel": {
+          "start_ns": 7604219391010,
+          "end_ns": 7604223127690,
+          "latency_ms": 3.73668
+        },
+        "read_c": {
+          "start_ns": 4920991891300,
+          "end_ns": 4920992138500,
+          "latency_ms": 0.2472
+        }
+      },
+      "iteration": 2,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.62496,
+      "h2d_ms": 0.45768000000000003,
+      "d2h_ms": 0.39996,
+      "end_to_end_ms": 6.3175,
+      "events": {
+        "write_a": {
+          "start_ns": 4921261846190,
+          "end_ns": 4921262134510,
+          "latency_ms": 0.28832
+        },
+        "write_b": {
+          "start_ns": 4921262199350,
+          "end_ns": 4921262368710,
+          "latency_ms": 0.16936
+        },
+        "kernel": {
+          "start_ns": 7604494702390,
+          "end_ns": 7604498327350,
+          "latency_ms": 3.62496
+        },
+        "read_c": {
+          "start_ns": 4921267160840,
+          "end_ns": 4921267560800,
+          "latency_ms": 0.39996
+        }
+      },
+      "iteration": 3,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.67932,
+      "h2d_ms": 0.45422,
+      "d2h_ms": 0.25416,
+      "end_to_end_ms": 6.1896,
+      "events": {
+        "write_a": {
+          "start_ns": 4921538235160,
+          "end_ns": 4921538512920,
+          "latency_ms": 0.27776
+        },
+        "write_b": {
+          "start_ns": 4921538545160,
+          "end_ns": 4921538721620,
+          "latency_ms": 0.17646
+        },
+        "kernel": {
+          "start_ns": 7604771020170,
+          "end_ns": 7604774699490,
+          "latency_ms": 3.67932
+        },
+        "read_c": {
+          "start_ns": 4921543525140,
+          "end_ns": 4921543779300,
+          "latency_ms": 0.25416
+        }
+      },
+      "iteration": 4,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.45757,
+      "h2d_ms": 0.46032,
+      "d2h_ms": 0.32492,
+      "end_to_end_ms": 5.5165,
+      "events": {
+        "write_a": {
+          "start_ns": 4921818045590,
+          "end_ns": 4921818272390,
+          "latency_ms": 0.2268
+        },
+        "write_b": {
+          "start_ns": 4921818388550,
+          "end_ns": 4921818622070,
+          "latency_ms": 0.23352
+        },
+        "kernel": {
+          "start_ns": 7605050499780,
+          "end_ns": 7605053957350,
+          "latency_ms": 3.45757
+        },
+        "read_c": {
+          "start_ns": 4921822740280,
+          "end_ns": 4921823065200,
+          "latency_ms": 0.32492
+        }
+      },
+      "iteration": 5,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.66012,
+      "h2d_ms": 0.44055999999999995,
+      "d2h_ms": 0.44128,
+      "end_to_end_ms": 6.3991,
+      "events": {
+        "write_a": {
+          "start_ns": 4922092007580,
+          "end_ns": 4922092269060,
+          "latency_ms": 0.26148
+        },
+        "write_b": {
+          "start_ns": 4922092313100,
+          "end_ns": 4922092492180,
+          "latency_ms": 0.17908
+        },
+        "kernel": {
+          "start_ns": 7605324957240,
+          "end_ns": 7605328617360,
+          "latency_ms": 3.66012
+        },
+        "read_c": {
+          "start_ns": 4922097413320,
+          "end_ns": 4922097854600,
+          "latency_ms": 0.44128
+        }
+      },
+      "iteration": 6,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.62852,
+      "h2d_ms": 0.5226999999999999,
+      "d2h_ms": 0.26208,
+      "end_to_end_ms": 6.3912,
+      "events": {
+        "write_a": {
+          "start_ns": 4922374713180,
+          "end_ns": 4922375014060,
+          "latency_ms": 0.30088
+        },
+        "write_b": {
+          "start_ns": 4922375115420,
+          "end_ns": 4922375337240,
+          "latency_ms": 0.22182
+        },
+        "kernel": {
+          "start_ns": 7605607731710,
+          "end_ns": 7605611360230,
+          "latency_ms": 3.62852
+        },
+        "read_c": {
+          "start_ns": 4922380341720,
+          "end_ns": 4922380603800,
+          "latency_ms": 0.26208
+        }
+      },
+      "iteration": 7,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.97644,
+      "h2d_ms": 0.4768,
+      "d2h_ms": 0.49644,
+      "end_to_end_ms": 7.5638,
+      "events": {
+        "write_a": {
+          "start_ns": 4922657587260,
+          "end_ns": 4922657853060,
+          "latency_ms": 0.2658
+        },
+        "write_b": {
+          "start_ns": 4922657897180,
+          "end_ns": 4922658108180,
+          "latency_ms": 0.211
+        },
+        "kernel": {
+          "start_ns": 7605890630220,
+          "end_ns": 7605894606660,
+          "latency_ms": 3.97644
+        },
+        "read_c": {
+          "start_ns": 4922664007460,
+          "end_ns": 4922664503900,
+          "latency_ms": 0.49644
+        }
+      },
+      "iteration": 8,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.62788,
+      "h2d_ms": 0.61032,
+      "d2h_ms": 0.3496,
+      "end_to_end_ms": 6.348,
+      "events": {
+        "write_a": {
+          "start_ns": 4922934434110,
+          "end_ns": 4922934757990,
+          "latency_ms": 0.32388
+        },
+        "write_b": {
+          "start_ns": 4922934916510,
+          "end_ns": 4922935202950,
+          "latency_ms": 0.28644
+        },
+        "kernel": {
+          "start_ns": 7606167531280,
+          "end_ns": 7606171159160,
+          "latency_ms": 3.62788
+        },
+        "read_c": {
+          "start_ns": 4922939913000,
+          "end_ns": 4922940262600,
+          "latency_ms": 0.3496
+        }
+      },
+      "iteration": 9,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.57704,
+      "h2d_ms": 0.71192,
+      "d2h_ms": 0.26652,
+      "end_to_end_ms": 6.4726,
+      "events": {
+        "write_a": {
+          "start_ns": 4923206450360,
+          "end_ns": 4923206781360,
+          "latency_ms": 0.331
+        },
+        "write_b": {
+          "start_ns": 4923206892080,
+          "end_ns": 4923207273000,
+          "latency_ms": 0.38092
+        },
+        "kernel": {
+          "start_ns": 7606439626960,
+          "end_ns": 7606443204000,
+          "latency_ms": 3.57704
+        },
+        "read_c": {
+          "start_ns": 4923211994680,
+          "end_ns": 4923212261200,
+          "latency_ms": 0.26652
+        }
+      },
+      "iteration": 10,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 4.13005,
+      "h2d_ms": 0.6721600000000001,
+      "d2h_ms": 0.34508,
+      "end_to_end_ms": 6.6929,
+      "events": {
+        "write_a": {
+          "start_ns": 4923485387800,
+          "end_ns": 4923485749280,
+          "latency_ms": 0.36148
+        },
+        "write_b": {
+          "start_ns": 4923485774520,
+          "end_ns": 4923486085200,
+          "latency_ms": 0.31068
+        },
+        "kernel": {
+          "start_ns": 7606718056520,
+          "end_ns": 7606722186570,
+          "latency_ms": 4.13005
+        },
+        "read_c": {
+          "start_ns": 4923491045420,
+          "end_ns": 4923491390500,
+          "latency_ms": 0.34508
+        }
+      },
+      "iteration": 11,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.80752,
+      "h2d_ms": 0.60816,
+      "d2h_ms": 0.30916,
+      "end_to_end_ms": 6.6031,
+      "events": {
+        "write_a": {
+          "start_ns": 4923765045860,
+          "end_ns": 4923765342740,
+          "latency_ms": 0.29688
+        },
+        "write_b": {
+          "start_ns": 4923765393500,
+          "end_ns": 4923765704780,
+          "latency_ms": 0.31128
+        },
+        "kernel": {
+          "start_ns": 7606997657780,
+          "end_ns": 7607001465300,
+          "latency_ms": 3.80752
+        },
+        "read_c": {
+          "start_ns": 4923770742040,
+          "end_ns": 4923771051200,
+          "latency_ms": 0.30916
+        }
+      },
+      "iteration": 12,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.44756,
+      "h2d_ms": 0.5993999999999999,
+      "d2h_ms": 0.31808,
+      "end_to_end_ms": 6.1145,
+      "events": {
+        "write_a": {
+          "start_ns": 4924043453820,
+          "end_ns": 4924043764140,
+          "latency_ms": 0.31032
+        },
+        "write_b": {
+          "start_ns": 4924043837300,
+          "end_ns": 4924044126380,
+          "latency_ms": 0.28908
+        },
+        "kernel": {
+          "start_ns": 7607275965380,
+          "end_ns": 7607279412940,
+          "latency_ms": 3.44756
+        },
+        "read_c": {
+          "start_ns": 4924048658420,
+          "end_ns": 4924048976500,
+          "latency_ms": 0.31808
+        }
+      },
+      "iteration": 13,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.43064,
+      "h2d_ms": 0.5014799999999999,
+      "d2h_ms": 0.38885,
+      "end_to_end_ms": 6.3803,
+      "events": {
+        "write_a": {
+          "start_ns": 4924328879950,
+          "end_ns": 4924329130550,
+          "latency_ms": 0.2506
+        },
+        "write_b": {
+          "start_ns": 4924329175590,
+          "end_ns": 4924329426470,
+          "latency_ms": 0.25088
+        },
+        "kernel": {
+          "start_ns": 7607561239690,
+          "end_ns": 7607564670330,
+          "latency_ms": 3.43064
+        },
+        "read_c": {
+          "start_ns": 4924334061350,
+          "end_ns": 4924334450200,
+          "latency_ms": 0.38885
+        }
+      },
+      "iteration": 14,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.66488,
+      "h2d_ms": 0.46984000000000004,
+      "d2h_ms": 0.595,
+      "end_to_end_ms": 6.9387,
+      "events": {
+        "write_a": {
+          "start_ns": 4924604630390,
+          "end_ns": 4924604910710,
+          "latency_ms": 0.28032
+        },
+        "write_b": {
+          "start_ns": 4924604960830,
+          "end_ns": 4924605150350,
+          "latency_ms": 0.18952
+        },
+        "kernel": {
+          "start_ns": 7607837930670,
+          "end_ns": 7607841595550,
+          "latency_ms": 3.66488
+        },
+        "read_c": {
+          "start_ns": 4924610351200,
+          "end_ns": 4924610946200,
+          "latency_ms": 0.595
+        }
+      },
+      "iteration": 15,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.67089,
+      "h2d_ms": 0.42876000000000003,
+      "d2h_ms": 0.34968,
+      "end_to_end_ms": 5.7733,
+      "events": {
+        "write_a": {
+          "start_ns": 4924881699440,
+          "end_ns": 4924881923880,
+          "latency_ms": 0.22444
+        },
+        "write_b": {
+          "start_ns": 4924882029400,
+          "end_ns": 4924882233720,
+          "latency_ms": 0.20432
+        },
+        "kernel": {
+          "start_ns": 7608114114000,
+          "end_ns": 7608117784890,
+          "latency_ms": 3.67089
+        },
+        "read_c": {
+          "start_ns": 4924886613720,
+          "end_ns": 4924886963400,
+          "latency_ms": 0.34968
+        }
+      },
+      "iteration": 16,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.94724,
+      "h2d_ms": 0.5851999999999999,
+      "d2h_ms": 0.46692,
+      "end_to_end_ms": 7.9163,
+      "events": {
+        "write_a": {
+          "start_ns": 4925163441330,
+          "end_ns": 4925163757530,
+          "latency_ms": 0.3162
+        },
+        "write_b": {
+          "start_ns": 4925163897050,
+          "end_ns": 4925164166050,
+          "latency_ms": 0.269
+        },
+        "kernel": {
+          "start_ns": 7608396884270,
+          "end_ns": 7608400831510,
+          "latency_ms": 3.94724
+        },
+        "read_c": {
+          "start_ns": 4925170332780,
+          "end_ns": 4925170799700,
+          "latency_ms": 0.46692
+        }
+      },
+      "iteration": 17,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.64304,
+      "h2d_ms": 0.5189600000000001,
+      "d2h_ms": 0.24708,
+      "end_to_end_ms": 7.1877,
+      "events": {
+        "write_a": {
+          "start_ns": 4925439917020,
+          "end_ns": 4925440226820,
+          "latency_ms": 0.3098
+        },
+        "write_b": {
+          "start_ns": 4925440278700,
+          "end_ns": 4925440487860,
+          "latency_ms": 0.20916
+        },
+        "kernel": {
+          "start_ns": 7608672933510,
+          "end_ns": 7608676576550,
+          "latency_ms": 3.64304
+        },
+        "read_c": {
+          "start_ns": 4925446237220,
+          "end_ns": 4925446484300,
+          "latency_ms": 0.24708
+        }
+      },
+      "iteration": 18,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.55376,
+      "h2d_ms": 0.72268,
+      "d2h_ms": 0.29016,
+      "end_to_end_ms": 5.7744,
+      "events": {
+        "write_a": {
+          "start_ns": 4925709052430,
+          "end_ns": 4925709527870,
+          "latency_ms": 0.47544
+        },
+        "write_b": {
+          "start_ns": 4925709552710,
+          "end_ns": 4925709799950,
+          "latency_ms": 0.24724
+        },
+        "kernel": {
+          "start_ns": 7608941541810,
+          "end_ns": 7608945095570,
+          "latency_ms": 3.55376
+        },
+        "read_c": {
+          "start_ns": 4925713895040,
+          "end_ns": 4925714185200,
+          "latency_ms": 0.29016
+        }
+      },
+      "iteration": 19,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.86472,
+      "h2d_ms": 0.5062,
+      "d2h_ms": 0.38556,
+      "end_to_end_ms": 6.1625,
+      "events": {
+        "write_a": {
+          "start_ns": 4925984319770,
+          "end_ns": 4925984572370,
+          "latency_ms": 0.2526
+        },
+        "write_b": {
+          "start_ns": 4925984676130,
+          "end_ns": 4925984929730,
+          "latency_ms": 0.2536
+        },
+        "kernel": {
+          "start_ns": 7609216808900,
+          "end_ns": 7609220673620,
+          "latency_ms": 3.86472
+        },
+        "read_c": {
+          "start_ns": 4925989542340,
+          "end_ns": 4925989927900,
+          "latency_ms": 0.38556
+        }
+      },
+      "iteration": 20,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.54928,
+      "h2d_ms": 0.51476,
+      "d2h_ms": 0.3906,
+      "end_to_end_ms": 6.4338,
+      "events": {
+        "write_a": {
+          "start_ns": 4926261542490,
+          "end_ns": 4926261787010,
+          "latency_ms": 0.24452
+        },
+        "write_b": {
+          "start_ns": 4926261959490,
+          "end_ns": 4926262229730,
+          "latency_ms": 0.27024
+        },
+        "kernel": {
+          "start_ns": 7609494594080,
+          "end_ns": 7609498143360,
+          "latency_ms": 3.54928
+        },
+        "read_c": {
+          "start_ns": 4926266975900,
+          "end_ns": 4926267366500,
+          "latency_ms": 0.3906
+        }
+      },
+      "iteration": 21,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 4.05968,
+      "h2d_ms": 0.4468,
+      "d2h_ms": 0.50384,
+      "end_to_end_ms": 6.9665,
+      "events": {
+        "write_a": {
+          "start_ns": 4926537542030,
+          "end_ns": 4926537809710,
+          "latency_ms": 0.26768
+        },
+        "write_b": {
+          "start_ns": 4926537858390,
+          "end_ns": 4926538037510,
+          "latency_ms": 0.17912
+        },
+        "kernel": {
+          "start_ns": 7609770517430,
+          "end_ns": 7609774577110,
+          "latency_ms": 4.05968
+        },
+        "read_c": {
+          "start_ns": 4926543395160,
+          "end_ns": 4926543899000,
+          "latency_ms": 0.50384
+        }
+      },
+      "iteration": 22,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.715,
+      "h2d_ms": 0.46768,
+      "d2h_ms": 0.3998,
+      "end_to_end_ms": 6.0742,
+      "events": {
+        "write_a": {
+          "start_ns": 4926813296780,
+          "end_ns": 4926813526140,
+          "latency_ms": 0.22936
+        },
+        "write_b": {
+          "start_ns": 4926813634580,
+          "end_ns": 4926813872900,
+          "latency_ms": 0.23832
+        },
+        "kernel": {
+          "start_ns": 7610045774320,
+          "end_ns": 7610049489320,
+          "latency_ms": 3.715
+        },
+        "read_c": {
+          "start_ns": 4926818323700,
+          "end_ns": 4926818723500,
+          "latency_ms": 0.3998
+        }
+      },
+      "iteration": 23,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.9622,
+      "h2d_ms": 0.46484000000000003,
+      "d2h_ms": 0.30824,
+      "end_to_end_ms": 7.06,
+      "events": {
+        "write_a": {
+          "start_ns": 4927091049740,
+          "end_ns": 4927091344100,
+          "latency_ms": 0.29436
+        },
+        "write_b": {
+          "start_ns": 4927091397460,
+          "end_ns": 4927091567940,
+          "latency_ms": 0.17048
+        },
+        "kernel": {
+          "start_ns": 7610323870350,
+          "end_ns": 7610327832550,
+          "latency_ms": 3.9622
+        },
+        "read_c": {
+          "start_ns": 4927097097860,
+          "end_ns": 4927097406100,
+          "latency_ms": 0.30824
+        }
+      },
+      "iteration": 24,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.54524,
+      "h2d_ms": 0.6140399999999999,
+      "d2h_ms": 0.4226,
+      "end_to_end_ms": 6.6459,
+      "events": {
+        "write_a": {
+          "start_ns": 4927368490220,
+          "end_ns": 4927368846820,
+          "latency_ms": 0.3566
+        },
+        "write_b": {
+          "start_ns": 4927368897940,
+          "end_ns": 4927369155380,
+          "latency_ms": 0.25744
+        },
+        "kernel": {
+          "start_ns": 7610601700140,
+          "end_ns": 7610605245380,
+          "latency_ms": 3.54524
+        },
+        "read_c": {
+          "start_ns": 4927374057700,
+          "end_ns": 4927374480300,
+          "latency_ms": 0.4226
+        }
+      },
+      "iteration": 25,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.71584,
+      "h2d_ms": 0.63536,
+      "d2h_ms": 0.3024,
+      "end_to_end_ms": 6.438,
+      "events": {
+        "write_a": {
+          "start_ns": 4927639792870,
+          "end_ns": 4927640188030,
+          "latency_ms": 0.39516
+        },
+        "write_b": {
+          "start_ns": 4927640213070,
+          "end_ns": 4927640453270,
+          "latency_ms": 0.2402
+        },
+        "kernel": {
+          "start_ns": 7610872807250,
+          "end_ns": 7610876523090,
+          "latency_ms": 3.71584
+        },
+        "read_c": {
+          "start_ns": 4927645282000,
+          "end_ns": 4927645584400,
+          "latency_ms": 0.3024
+        }
+      },
+      "iteration": 26,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.74406,
+      "h2d_ms": 0.69484,
+      "d2h_ms": 0.36948,
+      "end_to_end_ms": 6.0621,
+      "events": {
+        "write_a": {
+          "start_ns": 4927919102170,
+          "end_ns": 4927919453850,
+          "latency_ms": 0.35168
+        },
+        "write_b": {
+          "start_ns": 4927919478690,
+          "end_ns": 4927919821850,
+          "latency_ms": 0.34316
+        },
+        "kernel": {
+          "start_ns": 7611151784230,
+          "end_ns": 7611155528290,
+          "latency_ms": 3.74406
+        },
+        "read_c": {
+          "start_ns": 4927924285820,
+          "end_ns": 4927924655300,
+          "latency_ms": 0.36948
+        }
+      },
+      "iteration": 27,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.49448,
+      "h2d_ms": 0.5455,
+      "d2h_ms": 0.30512,
+      "end_to_end_ms": 5.7663,
+      "events": {
+        "write_a": {
+          "start_ns": 4928210617700,
+          "end_ns": 4928210896980,
+          "latency_ms": 0.27928
+        },
+        "write_b": {
+          "start_ns": 4928210922420,
+          "end_ns": 4928211188640,
+          "latency_ms": 0.26622
+        },
+        "kernel": {
+          "start_ns": 7611442991110,
+          "end_ns": 7611446485590,
+          "latency_ms": 3.49448
+        },
+        "read_c": {
+          "start_ns": 4928215435680,
+          "end_ns": 4928215740800,
+          "latency_ms": 0.30512
+        }
+      },
+      "iteration": 28,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.5605,
+      "h2d_ms": 0.48817999999999995,
+      "d2h_ms": 0.34324,
+      "end_to_end_ms": 5.934,
+      "events": {
+        "write_a": {
+          "start_ns": 4928513821780,
+          "end_ns": 4928514148300,
+          "latency_ms": 0.32652
+        },
+        "write_b": {
+          "start_ns": 4928514174340,
+          "end_ns": 4928514336000,
+          "latency_ms": 0.16166
+        },
+        "kernel": {
+          "start_ns": 7611746309810,
+          "end_ns": 7611749870310,
+          "latency_ms": 3.5605
+        },
+        "read_c": {
+          "start_ns": 4928518838360,
+          "end_ns": 4928519181600,
+          "latency_ms": 0.34324
+        }
+      },
+      "iteration": 29,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.86062,
+      "h2d_ms": 0.53508,
+      "d2h_ms": 0.40948,
+      "end_to_end_ms": 6.184,
+      "events": {
+        "write_a": {
+          "start_ns": 4928783678380,
+          "end_ns": 4928783962140,
+          "latency_ms": 0.28376
+        },
+        "write_b": {
+          "start_ns": 4928784074460,
+          "end_ns": 4928784325780,
+          "latency_ms": 0.25132
+        },
+        "kernel": {
+          "start_ns": 7612016227150,
+          "end_ns": 7612020087770,
+          "latency_ms": 3.86062
+        },
+        "read_c": {
+          "start_ns": 4928788910820,
+          "end_ns": 4928789320300,
+          "latency_ms": 0.40948
+        }
+      },
+      "iteration": 30,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.64228,
+      "h2d_ms": 0.6508,
+      "d2h_ms": 0.41,
+      "end_to_end_ms": 6.7098,
+      "events": {
+        "write_a": {
+          "start_ns": 4929068257400,
+          "end_ns": 4929068523040,
+          "latency_ms": 0.26564
+        },
+        "write_b": {
+          "start_ns": 4929068548120,
+          "end_ns": 4929068933280,
+          "latency_ms": 0.38516
+        },
+        "kernel": {
+          "start_ns": 7612301462230,
+          "end_ns": 7612305104510,
+          "latency_ms": 3.64228
+        },
+        "read_c": {
+          "start_ns": 4929074015100,
+          "end_ns": 4929074425100,
+          "latency_ms": 0.41
+        }
+      },
+      "iteration": 31,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.89903,
+      "h2d_ms": 0.54968,
+      "d2h_ms": 0.32212,
+      "end_to_end_ms": 6.5079,
+      "events": {
+        "write_a": {
+          "start_ns": 4929348603160,
+          "end_ns": 4929348853680,
+          "latency_ms": 0.25052
+        },
+        "write_b": {
+          "start_ns": 4929348908280,
+          "end_ns": 4929349207440,
+          "latency_ms": 0.29916
+        },
+        "kernel": {
+          "start_ns": 7612581199580,
+          "end_ns": 7612585098610,
+          "latency_ms": 3.89903
+        },
+        "read_c": {
+          "start_ns": 4929354127680,
+          "end_ns": 4929354449800,
+          "latency_ms": 0.32212
+        }
+      },
+      "iteration": 32,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.61508,
+      "h2d_ms": 0.50044,
+      "d2h_ms": 0.45154,
+      "end_to_end_ms": 7.4174,
+      "events": {
+        "write_a": {
+          "start_ns": 4929622981010,
+          "end_ns": 4929623287130,
+          "latency_ms": 0.30612
+        },
+        "write_b": {
+          "start_ns": 4929623403210,
+          "end_ns": 4929623597530,
+          "latency_ms": 0.19432
+        },
+        "kernel": {
+          "start_ns": 7612856057350,
+          "end_ns": 7612859672430,
+          "latency_ms": 3.61508
+        },
+        "read_c": {
+          "start_ns": 4929629379460,
+          "end_ns": 4929629831000,
+          "latency_ms": 0.45154
+        }
+      },
+      "iteration": 33,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.56252,
+      "h2d_ms": 0.43688,
+      "d2h_ms": 0.3752,
+      "end_to_end_ms": 6.4224,
+      "events": {
+        "write_a": {
+          "start_ns": 4929898938610,
+          "end_ns": 4929899206650,
+          "latency_ms": 0.26804
+        },
+        "write_b": {
+          "start_ns": 4929899231490,
+          "end_ns": 4929899400330,
+          "latency_ms": 0.16884
+        },
+        "kernel": {
+          "start_ns": 7613131832230,
+          "end_ns": 7613135394750,
+          "latency_ms": 3.56252
+        },
+        "read_c": {
+          "start_ns": 4929904196700,
+          "end_ns": 4929904571900,
+          "latency_ms": 0.3752
+        }
+      },
+      "iteration": 34,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.65536,
+      "h2d_ms": 0.61752,
+      "d2h_ms": 0.23112,
+      "end_to_end_ms": 6.804,
+      "events": {
+        "write_a": {
+          "start_ns": 4930173217390,
+          "end_ns": 4930173502230,
+          "latency_ms": 0.28484
+        },
+        "write_b": {
+          "start_ns": 4930173638390,
+          "end_ns": 4930173971070,
+          "latency_ms": 0.33268
+        },
+        "kernel": {
+          "start_ns": 7613406610510,
+          "end_ns": 7613410265870,
+          "latency_ms": 3.65536
+        },
+        "read_c": {
+          "start_ns": 4930179033480,
+          "end_ns": 4930179264600,
+          "latency_ms": 0.23112
+        }
+      },
+      "iteration": 35,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.42844,
+      "h2d_ms": 0.46536,
+      "d2h_ms": 0.36756,
+      "end_to_end_ms": 5.4855,
+      "events": {
+        "write_a": {
+          "start_ns": 4930445470260,
+          "end_ns": 4930445717860,
+          "latency_ms": 0.2476
+        },
+        "write_b": {
+          "start_ns": 4930445830060,
+          "end_ns": 4930446047820,
+          "latency_ms": 0.21776
+        },
+        "kernel": {
+          "start_ns": 7613677858820,
+          "end_ns": 7613681287260,
+          "latency_ms": 3.42844
+        },
+        "read_c": {
+          "start_ns": 4930450084540,
+          "end_ns": 4930450452100,
+          "latency_ms": 0.36756
+        }
+      },
+      "iteration": 36,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.48381,
+      "h2d_ms": 0.5252,
+      "d2h_ms": 0.47132,
+      "end_to_end_ms": 6.2776,
+      "events": {
+        "write_a": {
+          "start_ns": 4930716299710,
+          "end_ns": 4930716598430,
+          "latency_ms": 0.29872
+        },
+        "write_b": {
+          "start_ns": 4930716703710,
+          "end_ns": 4930716930190,
+          "latency_ms": 0.22648
+        },
+        "kernel": {
+          "start_ns": 7613948838510,
+          "end_ns": 7613952322320,
+          "latency_ms": 3.48381
+        },
+        "read_c": {
+          "start_ns": 4930721436080,
+          "end_ns": 4930721907400,
+          "latency_ms": 0.47132
+        }
+      },
+      "iteration": 37,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.95628,
+      "h2d_ms": 0.47416,
+      "d2h_ms": 0.26832,
+      "end_to_end_ms": 6.9002,
+      "events": {
+        "write_a": {
+          "start_ns": 4930991866520,
+          "end_ns": 4930992152000,
+          "latency_ms": 0.28548
+        },
+        "write_b": {
+          "start_ns": 4930992203280,
+          "end_ns": 4930992391960,
+          "latency_ms": 0.18868
+        },
+        "kernel": {
+          "start_ns": 7614224814880,
+          "end_ns": 7614228771160,
+          "latency_ms": 3.95628
+        },
+        "read_c": {
+          "start_ns": 4930997793080,
+          "end_ns": 4930998061400,
+          "latency_ms": 0.26832
+        }
+      },
+      "iteration": 38,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.83922,
+      "h2d_ms": 0.51508,
+      "d2h_ms": 0.24864,
+      "end_to_end_ms": 6.4406,
+      "events": {
+        "write_a": {
+          "start_ns": 4931273356480,
+          "end_ns": 4931273668600,
+          "latency_ms": 0.31212
+        },
+        "write_b": {
+          "start_ns": 4931273724880,
+          "end_ns": 4931273927840,
+          "latency_ms": 0.20296
+        },
+        "kernel": {
+          "start_ns": 7614506346830,
+          "end_ns": 7614510186050,
+          "latency_ms": 3.83922
+        },
+        "read_c": {
+          "start_ns": 4931278957860,
+          "end_ns": 4931279206500,
+          "latency_ms": 0.24864
+        }
+      },
+      "iteration": 39,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.69772,
+      "h2d_ms": 0.6478,
+      "d2h_ms": 0.23808,
+      "end_to_end_ms": 6.8437,
+      "events": {
+        "write_a": {
+          "start_ns": 4931555832780,
+          "end_ns": 4931556170780,
+          "latency_ms": 0.338
+        },
+        "write_b": {
+          "start_ns": 4931556240620,
+          "end_ns": 4931556550420,
+          "latency_ms": 0.3098
+        },
+        "kernel": {
+          "start_ns": 7614789253780,
+          "end_ns": 7614792951500,
+          "latency_ms": 3.69772
+        },
+        "read_c": {
+          "start_ns": 4931561862220,
+          "end_ns": 4931562100300,
+          "latency_ms": 0.23808
+        }
+      },
+      "iteration": 40,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.435,
+      "h2d_ms": 0.67676,
+      "d2h_ms": 0.40488,
+      "end_to_end_ms": 5.9351,
+      "events": {
+        "write_a": {
+          "start_ns": 4931860776200,
+          "end_ns": 4931861135920,
+          "latency_ms": 0.35972
+        },
+        "write_b": {
+          "start_ns": 4931861309640,
+          "end_ns": 4931861626680,
+          "latency_ms": 0.31704
+        },
+        "kernel": {
+          "start_ns": 7615093471950,
+          "end_ns": 7615096906950,
+          "latency_ms": 3.435
+        },
+        "read_c": {
+          "start_ns": 4931865748920,
+          "end_ns": 4931866153800,
+          "latency_ms": 0.40488
+        }
+      },
+      "iteration": 41,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.41672,
+      "h2d_ms": 0.42388,
+      "d2h_ms": 0.37868,
+      "end_to_end_ms": 5.615,
+      "events": {
+        "write_a": {
+          "start_ns": 4932147026760,
+          "end_ns": 4932147256600,
+          "latency_ms": 0.22984
+        },
+        "write_b": {
+          "start_ns": 4932147335440,
+          "end_ns": 4932147529480,
+          "latency_ms": 0.19404
+        },
+        "kernel": {
+          "start_ns": 7615379317490,
+          "end_ns": 7615382734210,
+          "latency_ms": 3.41672
+        },
+        "read_c": {
+          "start_ns": 4932151666920,
+          "end_ns": 4932152045600,
+          "latency_ms": 0.37868
+        }
+      },
+      "iteration": 42,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 4.04988,
+      "h2d_ms": 0.63276,
+      "d2h_ms": 0.35448,
+      "end_to_end_ms": 7.3467,
+      "events": {
+        "write_a": {
+          "start_ns": 4932421131910,
+          "end_ns": 4932421417110,
+          "latency_ms": 0.2852
+        },
+        "write_b": {
+          "start_ns": 4932421477430,
+          "end_ns": 4932421824990,
+          "latency_ms": 0.34756
+        },
+        "kernel": {
+          "start_ns": 7615654535490,
+          "end_ns": 7615658585370,
+          "latency_ms": 4.04988
+        },
+        "read_c": {
+          "start_ns": 4932427439320,
+          "end_ns": 4932427793800,
+          "latency_ms": 0.35448
+        }
+      },
+      "iteration": 43,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 4.0354,
+      "h2d_ms": 0.50048,
+      "d2h_ms": 0.34048,
+      "end_to_end_ms": 6.8554,
+      "events": {
+        "write_a": {
+          "start_ns": 4932704663760,
+          "end_ns": 4932704973440,
+          "latency_ms": 0.30968
+        },
+        "write_b": {
+          "start_ns": 4932705028960,
+          "end_ns": 4932705219760,
+          "latency_ms": 0.1908
+        },
+        "kernel": {
+          "start_ns": 7615937630380,
+          "end_ns": 7615941665780,
+          "latency_ms": 4.0354
+        },
+        "read_c": {
+          "start_ns": 4932710529520,
+          "end_ns": 4932710870000,
+          "latency_ms": 0.34048
+        }
+      },
+      "iteration": 44,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.54796,
+      "h2d_ms": 0.49604000000000004,
+      "d2h_ms": 0.2986,
+      "end_to_end_ms": 5.7679,
+      "events": {
+        "write_a": {
+          "start_ns": 4932987502620,
+          "end_ns": 4932987833660,
+          "latency_ms": 0.33104
+        },
+        "write_b": {
+          "start_ns": 4932987918500,
+          "end_ns": 4932988083500,
+          "latency_ms": 0.165
+        },
+        "kernel": {
+          "start_ns": 7616220010120,
+          "end_ns": 7616223558080,
+          "latency_ms": 3.54796
+        },
+        "read_c": {
+          "start_ns": 4932992397900,
+          "end_ns": 4932992696500,
+          "latency_ms": 0.2986
+        }
+      },
+      "iteration": 45,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.9538,
+      "h2d_ms": 0.56552,
+      "d2h_ms": 0.51216,
+      "end_to_end_ms": 7.5404,
+      "events": {
+        "write_a": {
+          "start_ns": 4933264227880,
+          "end_ns": 4933264529120,
+          "latency_ms": 0.30124
+        },
+        "write_b": {
+          "start_ns": 4933264578960,
+          "end_ns": 4933264843240,
+          "latency_ms": 0.26428
+        },
+        "kernel": {
+          "start_ns": 7616497279900,
+          "end_ns": 7616501233700,
+          "latency_ms": 3.9538
+        },
+        "read_c": {
+          "start_ns": 4933270462340,
+          "end_ns": 4933270974500,
+          "latency_ms": 0.51216
+        }
+      },
+      "iteration": 46,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.83949,
+      "h2d_ms": 0.6069599999999999,
+      "d2h_ms": 0.3116,
+      "end_to_end_ms": 6.5344,
+      "events": {
+        "write_a": {
+          "start_ns": 4933534814450,
+          "end_ns": 4933535079170,
+          "latency_ms": 0.26472
+        },
+        "write_b": {
+          "start_ns": 4933535103970,
+          "end_ns": 4933535446210,
+          "latency_ms": 0.34224
+        },
+        "kernel": {
+          "start_ns": 7616767775690,
+          "end_ns": 7616771615180,
+          "latency_ms": 3.83949
+        },
+        "read_c": {
+          "start_ns": 4933540483100,
+          "end_ns": 4933540794700,
+          "latency_ms": 0.3116
+        }
+      },
+      "iteration": 47,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.67552,
+      "h2d_ms": 0.48856,
+      "d2h_ms": 0.29352,
+      "end_to_end_ms": 6.5069,
+      "events": {
+        "write_a": {
+          "start_ns": 4933807597100,
+          "end_ns": 4933807908380,
+          "latency_ms": 0.31128
+        },
+        "write_b": {
+          "start_ns": 4933807962060,
+          "end_ns": 4933808139340,
+          "latency_ms": 0.17728
+        },
+        "kernel": {
+          "start_ns": 7617040683420,
+          "end_ns": 7617044358940,
+          "latency_ms": 3.67552
+        },
+        "read_c": {
+          "start_ns": 4933813197980,
+          "end_ns": 4933813491500,
+          "latency_ms": 0.29352
+        }
+      },
+      "iteration": 48,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.49032,
+      "h2d_ms": 0.49672,
+      "d2h_ms": 0.369,
+      "end_to_end_ms": 5.7682,
+      "events": {
+        "write_a": {
+          "start_ns": 4934081881960,
+          "end_ns": 4934082125680,
+          "latency_ms": 0.24372
+        },
+        "write_b": {
+          "start_ns": 4934082212360,
+          "end_ns": 4934082465360,
+          "latency_ms": 0.253
+        },
+        "kernel": {
+          "start_ns": 7617314343840,
+          "end_ns": 7617317834160,
+          "latency_ms": 3.49032
+        },
+        "read_c": {
+          "start_ns": 4934086659800,
+          "end_ns": 4934087028800,
+          "latency_ms": 0.369
+        }
+      },
+      "iteration": 49,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    },
+    {
+      "kernel_ms": 3.83372,
+      "h2d_ms": 0.50156,
+      "d2h_ms": 0.3962,
+      "end_to_end_ms": 6.5409,
+      "events": {
+        "write_a": {
+          "start_ns": 4934358566190,
+          "end_ns": 4934358797950,
+          "latency_ms": 0.23176
+        },
+        "write_b": {
+          "start_ns": 4934358822710,
+          "end_ns": 4934359092510,
+          "latency_ms": 0.2698
+        },
+        "kernel": {
+          "start_ns": 7617591432140,
+          "end_ns": 7617595265860,
+          "latency_ms": 3.83372
+        },
+        "read_c": {
+          "start_ns": 4934364104800,
+          "end_ns": 4934364501000,
+          "latency_ms": 0.3962
+        }
+      },
+      "iteration": 50,
+      "correctness": {
+        "result": "PASS",
+        "finite": true,
+        "failed_elements": 0,
+        "max_absolute_error": 0.000213623046875,
+        "mean_absolute_error": 2.939638216048479e-05,
+        "max_relative_error": 1.697004974103401e-06,
+        "mean_relative_error": 2.3006319513183068e-07,
+        "allowed_atol": 0.001,
+        "allowed_rtol": 0.001,
+        "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+        "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+      }
+    }
+  ],
+  "warmup_checks": [
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    }
+  ],
+  "warmups_completed": 10,
+  "device": {
+    "gpu_name": "AMD Radeon integrated graphics (Ryzen 7 7730U)",
+    "gpu_vendor": "Advanced Micro Devices, Inc.",
+    "opencl_device": "gfx90c",
+    "platform": "AMD Accelerated Parallel Processing",
+    "platform_vendor": "Advanced Micro Devices, Inc.",
+    "platform_version": "OpenCL 2.1 AMD-APP (3444.0)",
+    "opencl_version": "OpenCL 2.0 AMD-APP (3444.0)",
+    "opencl_c_version": "OpenCL C 2.0 ",
+    "driver_version": "3444.0 (PAL,HSAIL)",
+    "global_memory_bytes": 6518472704,
+    "global_memory_note": "Includes shared memory; not dedicated VRAM",
+    "profiling_timer_resolution_ns": 1,
+    "device_type": "CL_DEVICE_TYPE_GPU"
+  },
+  "device_capabilities": {
+    "max_work_group_size": 256,
+    "max_work_item_sizes": [
+      1024,
+      1024,
+      1024
+    ],
+    "local_memory_bytes": 32768
+  },
+  "kernel_capabilities": {
+    "max_work_group_size": 64,
+    "preferred_work_group_multiple": 64,
+    "local_memory_bytes": 512,
+    "private_memory_bytes": 0,
+    "compile_work_group_size": [
+      8,
+      8,
+      1
+    ]
+  },
+  "kernel_sha256": "6b62b758045ebe8c3ff2f38a17fe15acad11a94276814b40919d2a201d591261",
+  "input_sha256": {
+    "A": "811e8d6bcc7e5f57b36e3bd26d964fec32962ea7151b7e8a8e3d1e2a75074e6f",
+    "B": "a3a9861a3bbf4ba751c95fc13ca846cd83f18614aa85ad55c203952717389fda"
+  },
+  "preflight_timing": {
+    "kernel_ms": 3.41732,
+    "h2d_ms": 2.3245999999999998,
+    "d2h_ms": 0.39476,
+    "end_to_end_ms": 9.7689,
+    "events": {
+      "write_a": {
+        "start_ns": 4917593491520,
+        "end_ns": 4917593690400,
+        "latency_ms": 0.19888
+      },
+      "write_b": {
+        "start_ns": 4917593771080,
+        "end_ns": 4917595896800,
+        "latency_ms": 2.12572
+      },
+      "kernel": {
+        "start_ns": 7600828310150,
+        "end_ns": 7600831727470,
+        "latency_ms": 3.41732
+      },
+      "read_c": {
+        "start_ns": 4917600927040,
+        "end_ns": 4917601321800,
+        "latency_ms": 0.39476
+      }
+    }
+  },
+  "correctness": {
+    "result": "PASS",
+    "finite": true,
+    "failed_elements": 0,
+    "max_absolute_error": 0.000213623046875,
+    "mean_absolute_error": 2.939638216048479e-05,
+    "max_relative_error": 1.697004974103401e-06,
+    "mean_relative_error": 2.3006319513183068e-07,
+    "allowed_atol": 0.001,
+    "allowed_rtol": 0.001,
+    "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+    "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+  },
+  "timing_ms": {
+    "kernel_ms": {
+      "count": 50,
+      "median": 3.6625,
+      "mean": 3.6959192,
+      "p95": 4.043364,
+      "min": 3.40268,
+      "max": 4.13005
+    },
+    "h2d_ms": {
+      "count": 50,
+      "median": 0.51492,
+      "mean": 0.5380792,
+      "p95": 0.686704,
+      "min": 0.38239999999999996,
+      "max": 0.72268
+    },
+    "d2h_ms": {
+      "count": 50,
+      "median": 0.35208,
+      "mean": 0.3596358,
+      "p95": 0.5005099999999999,
+      "min": 0.23112,
+      "max": 0.595
+    },
+    "end_to_end_ms": {
+      "count": 50,
+      "median": 6.4281,
+      "mean": 6.43694,
+      "p95": 7.485049999999999,
+      "min": 5.4694,
+      "max": 7.9163
+    }
+  },
+  "gflops_from_median_kernel": 73.29295726962457,
+  "unroll_factor": 1,
+  "round": 2
+}

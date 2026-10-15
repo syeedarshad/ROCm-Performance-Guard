@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0",
+  "fingerprint": "37b7e1f382c9ef2b",
+  "benchmark": {
+    "name": "gemm_fp32",
+    "version": "1.0.0"
+  },
+  "configuration": {
+    "workload": "gemm",
+    "m": 512,
+    "n": 512,
+    "k": 512,
+    "dtype": "fp32",
+    "backend": "cpu",
+    "warmup_runs": 5,
+    "measurement_runs": 30,
+    "operation_count": 268435456,
+    "metadata": {
+      "timestamp": "2026-10-03T04:30:10.296873+00:00",
+      "matrix_dimensions": {
+        "m": 512,
+        "n": 512,
+        "k": 512
+      },
+      "dtype": "fp32",
+      "backend": "cpu"
+    }
+  },
+  "latency_ms": {
+    "count": 30,
+    "min": 1269.142842,
+    "mean": 1348.4370832666666,
+    "median": 1342.066954,
+    "p95": 1406.9371397999998,
+    "p99": 1428.9702539500001,
+    "max": 1436.603618,
+    "stddev": 40.40370709663792
+  },
+  "throughput": {
+    "operations_per_second": 200016441.20655403,
+    "gflops": 0.200016441206554,
+    "operations": 268435456
+  },
+  "hardware_snapshot": {
+    "cpu": {
+      "vendor": "AuthenticAMD",
+      "model_name": "AMD Ryzen 7 7730U with Radeon Graphics",
+      "physical_cores": 8,
+      "logical_cores": 16
+    },
+    "memory": {
+      "visible_to_linux_bytes": 7983501312,
+      "visible_to_linux_gb": 7.44,
+      "host_physical_bytes": 16487870464,
+      "host_physical_gb": 15.36,
+      "source": "proc_meminfo_and_wsl_host_interop",
+      "total_bytes": 7983501312,
+      "total_mb": 7613.66,
+      "total_gb": 7.44
+    },
+    "os": {
+      "distribution": "Ubuntu 24.04.5 LTS",
+      "distribution_id": "ubuntu",
+      "distribution_version": "24.04",
+      "kernel_version": "6.18.33.2-microsoft-standard-WSL2",
+      "architecture": "x86_64"
+    },
+    "wsl": {
+      "is_wsl": true,
+      "wsl_version": "2",
+      "wsl_package_version": "2.7.12.0",
+      "distro_name": "Ubuntu-24.04"
+    },
+    "gpu": {
+      "virtualized": true,
+      "linux_visible_devices": [
+        {
+          "pci_slot": "93fd:00:00.0",
+          "vendor": "Microsoft Corporation",
+          "vendor_id": "1414",
+          "device": "Basic Render Driver",
+          "device_id": "008e",
+          "class_name": "3D controller",
+          "class_code": "0302"
+        }
+      ],
+      "host_devices": [
+        {
+          "vendor": "Advanced Micro Devices, Inc.",
+          "name": "AMD Radeon (TM) Graphics",
+          "pci_vendor_id": "1002",
+          "pci_device_id": "15E7",
+          "driver_version": "31.0.12032.4"
+        }
+      ],
+      "detected": true,
+      "count": 1,
+      "devices": [
+        {
+          "pci_slot": "93fd:00:00.0",
+          "vendor": "Microsoft Corporation",
+          "vendor_id": "1414",
+          "device": "Basic Render Driver",
+          "device_id": "008e",
+          "class_name": "3D controller",
+          "class_code": "0302"
+        }
+      ]
+    },
+    "amd": {
+      "present": true,
+      "cpu_is_amd": true,
+      "gpu_is_amd": true,
+      "details": [
+        "AMD CPU: AMD Ryzen 7 7730U with Radeon Graphics",
+        "AMD Host GPU: AMD Radeon (TM) Graphics (PCI 1002:15E7)"
+      ]
+    },
+    "rocm": {
+      "is_available": false,
+      "version": null,
+      "tools": {
+        "rocminfo": false,
+        "amd_smi": false,
+        "rocm_smi": false,
+        "hipconfig": false
+      },
+      "kfd_available": false,
+      "install_path": null
+    }
+  },
+  "environment_snapshot": {
+    "python": {
+      "version": "3.13.16",
+      "implementation": "CPython",
+      "executable": "/home/arshadsd/ROCm-Performance-Guard/.venv/bin/python",
+      "architecture": "64bit"
+    },
+    "os": {
+      "distribution": "Ubuntu 24.04.5 LTS",
+      "distribution_version": "24.04",
+      "kernel_version": "6.18.33.2-microsoft-standard-WSL2",
+      "architecture": "x86_64"
+    },
+    "wsl": {
+      "is_wsl": true,
+      "wsl_version": "2",
+      "wsl_package_version": "2.7.12.0",
+      "distro_name": "Ubuntu-24.04"
+    },
+    "build_tools": {
+      "gcc": {
+        "available": false,
+        "version": null,
+        "path": null
+      },
+      "g++": {
+        "available": false,
+        "version": null,
+        "path": null
+      },
+      "clang": {
+        "available": false,
+        "version": null,
+        "path": null
+      },
+      "cmake": {
+        "available": false,
+        "version": null,
+        "path": null
+      },
+      "make": {
+        "available": false,
+        "version": null,
+        "path": null
+      }
+    },
+    "rocm": {
+      "available": false,
+      "version": null,
+      "rocminfo": {
+        "available": false,
+        "version": null,
+        "summary": null,
+        "path": null
+      },
+      "amd_smi": {
+        "available": false,
+        "version": null,
+        "summary": null,
+        "path": null
+      },
+      "rocm_smi": {
+        "available": false,
+        "version": null,
+        "summary": null,
+        "path": null
+      },
+      "hipconfig": {
+        "available": false,
+        "version": null,
+        "summary": null,
+        "path": null
+      }
+    },
+    "python_packages": {
+      "torch": {
+        "installed": false,
+        "version": null
+      },
+      "torchvision": {
+        "installed": false,
+        "version": null
+      },
+      "transformers": {
+        "installed": false,
+        "version": null
+      },
+      "onnxruntime": {
+        "installed": false,
+        "version": null
+      },
+      "numpy": {
+        "installed": false,
+        "version": null
+      },
+      "scipy": {
+        "installed": false,
+        "version": null
+      }
+    },
+    "environment_variables": {
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/sdars/.gemini/antigravity-ide/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/MySQL/MySQL Server 8.0/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Java/jdk-17.0.19/bin:/mnt/d/flutter/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/sdars/Downloads:/mnt/c/Users/sdars/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/sdars/AppData/Local/Programs/Python/Python313/:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/sdars/AppData/Local/Programs/cursor/resources/app/codeBin:/mnt/c/Users/sdars/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/sdars/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/sdars/AppData/Local/Programs/Windsurf/bin:/mnt/c/Users/sdars/AppData/Local/Python/bin:/mnt/c/Users/sdars/AppData/Local/Programs/Antigravity/bin:/mnt/c/Users/sdars/AppData/Local/Programs/Ollama:/mnt/c/Users/sdars/AppData/Local/Programs/Devin/bin:/mnt/c/Users/sdars/AppData/Roaming/npm:/mnt/d/cursor/resources/app/bin:/mnt/d/Antigravity IDE/bin:/mnt/c/Users/sdars/AppData/Local/Programs/DockerDesktop/resources/bin:/mnt/d/Devin/bin:/snap/bin",
+      "LD_LIBRARY_PATH": null,
+      "ROCM_PATH": null,
+      "HIP_PATH": null,
+      "HSA_PATH": null,
+      "HSA_OVERRIDE_GFX_VERSION": null,
+      "AMD_LOG_LEVEL": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "HIP_VISIBLE_DEVICES": null,
+      "ROCR_VISIBLE_DEVICES": null,
+      "GPU_DEVICE_ORDINAL": null,
+      "CUDA_VISIBLE_DEVICES": null,
+      "MIOPEN_LOG_LEVEL": null,
+      "MIOPEN_DEBUG_CONV_IMPLICIT_GEMM": null,
+      "PYTORCH_ROCM_ARCH": null,
+      "TORCH_CUDA_ARCH_LIST": null
+    },
+    "cpu_performance": {
+      "available": false,
+      "governor": null,
+      "frequency_mhz": null,
+      "details": "CPU frequency scaling information not available in this environment"
+    },
+    "tool_paths": {
+      "python": "/home/arshadsd/ROCm-Performance-Guard/.venv/bin/python",
+      "gcc": null,
+      "clang": null,
+      "rocminfo": null,
+      "amd-smi": null,
+      "hipconfig": null
+    }
+  }
+}

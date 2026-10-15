@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "experiment-007-opencl-work-item-mapping",
+  "timestamp": "2026-10-03T16:57:54.114613+00:00",
+  "hypothesis": "Improve row-major memory access by mapping dimension 0 to columns",
+  "baseline": {
+    "path": "experiments\\results\\experiment_006\\experiment_006_20261003_161254_144008_summary.json",
+    "sha256": "67637ec667dcc5bee35e984344a9edfa74871c3fb147831a2a85d355a44ff9da",
+    "tile": 8,
+    "median_ms": 6.13649
+  },
+  "workload": {
+    "M": 512,
+    "N": 512,
+    "K": 512,
+    "precision": "FP32"
+  },
+  "allowed_atol": 0.001,
+  "allowed_rtol": 0.001,
+  "protocol": {
+    "warmups": 10,
+    "measured_iterations": 50,
+    "independent_runs": 3,
+    "primary_metric": "completed OpenCL kernel event latency",
+    "order": [
+      "row_fast x3",
+      "column_fast x3"
+    ]
+  },
+  "discovery": {
+    "row_fast": {
+      "legal": true,
+      "device": {
+        "gpu_name": "AMD Radeon integrated graphics (Ryzen 7 7730U)",
+        "gpu_vendor": "Advanced Micro Devices, Inc.",
+        "opencl_device": "gfx90c",
+        "platform": "AMD Accelerated Parallel Processing",
+        "platform_vendor": "Advanced Micro Devices, Inc.",
+        "platform_version": "OpenCL 2.1 AMD-APP (3444.0)",
+        "opencl_version": "OpenCL 2.0 AMD-APP (3444.0)",
+        "opencl_c_version": "OpenCL C 2.0 ",
+        "driver_version": "3444.0 (PAL,HSAIL)",
+        "global_memory_bytes": 6518472704,
+        "global_memory_note": "Includes shared memory; not dedicated VRAM",
+        "profiling_timer_resolution_ns": 1,
+        "device_type": "CL_DEVICE_TYPE_GPU"
+      },
+      "device_capabilities": {
+        "max_work_group_size": 256,
+        "max_work_item_sizes": [
+          1024,
+          1024,
+          1024
+        ],
+        "local_memory_bytes": 32768
+      },
+      "kernel_capabilities": {
+        "max_work_group_size": 64,
+        "preferred_work_group_multiple": 64,
+        "local_memory_bytes": 512,
+        "private_memory_bytes": 0,
+        "compile_work_group_size": [
+          8,
+          8,
+          1
+        ]
+      },
+      "kernel_sha256": "8be01f2853bad1640099b19d0a802aa02dde1f382263cd6d2e7fc4679ac4d3c6"
+    },
+    "column_fast": {
+      "legal": true,
+      "device": {
+        "gpu_name": "AMD Radeon integrated graphics (Ryzen 7 7730U)",
+        "gpu_vendor": "Advanced Micro Devices, Inc.",
+        "opencl_device": "gfx90c",
+        "platform": "AMD Accelerated Parallel Processing",
+        "platform_vendor": "Advanced Micro Devices, Inc.",
+        "platform_version": "OpenCL 2.1 AMD-APP (3444.0)",
+        "opencl_version": "OpenCL 2.0 AMD-APP (3444.0)",
+        "opencl_c_version": "OpenCL C 2.0 ",
+        "driver_version": "3444.0 (PAL,HSAIL)",
+        "global_memory_bytes": 6518472704,
+        "global_memory_note": "Includes shared memory; not dedicated VRAM",
+        "profiling_timer_resolution_ns": 1,
+        "device_type": "CL_DEVICE_TYPE_GPU"
+      },
+      "device_capabilities": {
+        "max_work_group_size": 256,
+        "max_work_item_sizes": [
+          1024,
+          1024,
+          1024
+        ],
+        "local_memory_bytes": 32768
+      },
+      "kernel_capabilities": {
+        "max_work_group_size": 64,
+        "preferred_work_group_multiple": 64,
+        "local_memory_bytes": 512,
+        "private_memory_bytes": 0,
+        "compile_work_group_size": [
+          8,
+          8,
+          1
+        ]
+      },
+      "kernel_sha256": "6b62b758045ebe8c3ff2f38a17fe15acad11a94276814b40919d2a201d591261"
+    }
+  },
+  "decision_rule": {
+    "control_max_absolute_drift_percent": 5.0,
+    "control_max_run_cv_percent": 5.0,
+    "candidate_gate": {
+      "minimum_improvement_percent": 5.0,
+      "maximum_p95_ratio": 1.1,
+      "variability_margin": "improvement > 2 * max(baseline run-median CV%, candidate run-median CV%)",
+      "repeatability": "every candidate run median improves at least 5% versus locked pooled baseline median",
+      "correctness": "all preflight, warmup and measured outputs PASS at atol=rtol=0.001",
+      "limitation": "Variability margin is a conservative heuristic, not a statistical significance test."
+    },
+    "additional_gate": "Must pass the same improvement gates against fresh control AND locked Experiment 006",
+    "failure_action": "REJECT; no adoption if control is unreproduced or any correctness/protocol check fails"
+  },
+  "provenance": {
+    "script_sha256": "95ac9fd55d6e5048f3046e50cee7fb2800f7972b5dea67debea4ac3191259789",
+    "experiment6_script_sha256": "e56a9739db8dc06ddd478921c75a19498fd832df012903f52e5b92f115b06bd0",
+    "experiment5_script_sha256": "dc97c2ea3d60c062860223d599d041fadf44427352e0fd034bafea9daabb9332"
+  },
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+    "execution": "native Windows; AMD OpenCL; no ROCm or CUDA"
+  }
+}

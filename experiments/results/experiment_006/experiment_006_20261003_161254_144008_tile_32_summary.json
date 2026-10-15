@@ -1,0 +1,9 @@
+{
+  "tile": 32,
+  "result": "UNSUPPORTED",
+  "decision": "REJECT",
+  "reason": "Work-group exceeds device work-item limit",
+  "work_items": 1024,
+  "theoretical_local_memory_bytes": 8192,
+  "runs": []
+}

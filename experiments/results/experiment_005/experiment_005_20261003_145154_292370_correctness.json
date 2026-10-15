@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "experiment-005-opencl-gemm-baseline",
+  "experiment_name": "Acer AMD Radeon native Windows OpenCL GEMM baseline",
+  "timestamp": "2026-10-03T14:51:54.292417+00:00",
+  "workload": {
+    "M": 512,
+    "N": 512,
+    "K": 512,
+    "precision": "FP32",
+    "operation": "C = A x B",
+    "flops": 268435456
+  },
+  "protocol": {
+    "warmup_iterations": 10,
+    "measured_iterations": 50,
+    "independent_runs": 3,
+    "independence": "fresh child process and OpenCL context per run",
+    "correctness_preflight_iterations": 1,
+    "primary_metric": "median OpenCL kernel event latency",
+    "queue_profiling_enabled": true,
+    "in_order_queue": true,
+    "global_work_size": [
+      512,
+      512
+    ],
+    "local_work_size": "runtime selected",
+    "build_options": "-cl-std=CL1.2; FP_CONTRACT OFF; no fast-math",
+    "end_to_end_scope": "host before enqueue A/B writes through completion of C read",
+    "exclusions": "input/reference generation, context/build/allocation, validation, reporting",
+    "transfer_scope": "H2D=sum of A/B write events; D2H=C read event"
+  },
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+    "execution": "native Windows; AMD OpenCL; no ROCm or CUDA"
+  },
+  "provenance": {
+    "script_sha256": "dc97c2ea3d60c062860223d599d041fadf44427352e0fd034bafea9daabb9332",
+    "kernel_sha256": "ff5b004dee13e8b426c9ed7534a2f7be7034835cc47e0449f098c8a34a6dbcd9",
+    "input_generator_sha256": "380989918351bdaa6eabb340bbe61bb59e5a07bc7de1873143dd7c98c8c843cb"
+  },
+  "locked_cpu_baseline_sha256": "ded6b85ff3ec29349018c25ae7e0d7aedcb3ea719380dc5dec57d1f31d2376ad",
+  "mode": "correctness_only",
+  "result": "PASS",
+  "run": {
+    "timestamp": "2026-10-03T14:52:11.202926+00:00",
+    "process_id": 18472,
+    "input_sha256": {
+      "A": "811e8d6bcc7e5f57b36e3bd26d964fec32962ea7151b7e8a8e3d1e2a75074e6f",
+      "B": "a3a9861a3bbf4ba751c95fc13ca846cd83f18614aa85ad55c203952717389fda"
+    },
+    "reference": "CPU math.fsum of FP32 inputs, rounded to FP32 output",
+    "device": {
+      "gpu_name": "AMD Radeon integrated graphics (Ryzen 7 7730U)",
+      "gpu_vendor": "Advanced Micro Devices, Inc.",
+      "opencl_device": "gfx90c",
+      "platform": "AMD Accelerated Parallel Processing",
+      "platform_vendor": "Advanced Micro Devices, Inc.",
+      "platform_version": "OpenCL 2.1 AMD-APP (3444.0)",
+      "opencl_version": "OpenCL 2.0 AMD-APP (3444.0)",
+      "opencl_c_version": "OpenCL C 2.0 ",
+      "driver_version": "3444.0 (PAL,HSAIL)",
+      "global_memory_bytes": 6518472704,
+      "global_memory_note": "Includes shared memory; not dedicated VRAM",
+      "profiling_timer_resolution_ns": 1,
+      "device_type": "CL_DEVICE_TYPE_GPU"
+    },
+    "initial_timing": {
+      "kernel_ms": 14.69548,
+      "h2d_ms": 3.3896,
+      "d2h_ms": 0.48076,
+      "end_to_end_ms": 24.2367,
+      "events": {
+        "write_a": {
+          "start_ns": 23103262141270,
+          "end_ns": 23103262327950,
+          "latency_ms": 0.18668
+        },
+        "write_b": {
+          "start_ns": 23103263432070,
+          "end_ns": 23103266634990,
+          "latency_ms": 3.20292
+        },
+        "kernel": {
+          "start_ns": 23103267296670,
+          "end_ns": 23103281992150,
+          "latency_ms": 14.69548
+        },
+        "read_c": {
+          "start_ns": 23103282628840,
+          "end_ns": 23103283109600,
+          "latency_ms": 0.48076
+        }
+      }
+    },
+    "correctness": {
+      "result": "PASS",
+      "finite": true,
+      "failed_elements": 0,
+      "max_absolute_error": 0.000213623046875,
+      "mean_absolute_error": 2.939638216048479e-05,
+      "max_relative_error": 1.697004974103401e-06,
+      "mean_relative_error": 2.3006319513183068e-07,
+      "allowed_atol": 0.001,
+      "allowed_rtol": 0.001,
+      "criterion": "all finite and abs(GPU-CPU) <= atol + rtol*abs(CPU)",
+      "relative_error_definition": "abs(GPU-CPU)/max(abs(CPU), 1e-12)"
+    },
+    "result": "PASS",
+    "samples": []
+  },
+  "executed_protocol": {
+    "preflight_iterations": 1,
+    "warmup_iterations": 0,
+    "measured_iterations": 0,
+    "independent_runs": 1
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "timestamp": "2026-10-03T16:56:54.799Z",
+  "purpose": "Immutable pre-Experiment 007 snapshot",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "ca360b824620463e3624473632b95ec5d24d0b0afdd7a76482dfc26f316575f9"
+    },
+    {
+      "path": "src/__init__.py",
+      "sha256": "ee7f7bb29ab7087f68cc71cd0fa24213c42e582880d85e3aa2b406ec7d2d8032"
+    },
+    {
+      "path": "src/benchmark.py",
+      "sha256": "380989918351bdaa6eabb340bbe61bb59e5a07bc7de1873143dd7c98c8c843cb"
+    },
+    {
+      "path": "src/capabilities.py",
+      "sha256": "30a6c395a8100899d8dcd871fdc22c8ce99e3601926ee5c7376b3d3ce8f159c0"
+    },
+    {
+      "path": "src/diagnosis.py",
+      "sha256": "a21a619f875b2fdd5e919ff1a9d8416d8ad84cd2989c7656134c5c5685837da6"
+    },
+    {
+      "path": "src/environment.py",
+      "sha256": "c9974f7a764bae5d82e13d95518dfd9cf76b7b93cbee8705684824ea4aac284a"
+    },
+    {
+      "path": "src/experiment.py",
+      "sha256": "8244ab657243d22a320a0947de7ca8e436ca7fa827010dd31a12ca900d0793b6"
+    },
+    {
+      "path": "src/hardware.py",
+      "sha256": "048dfa33d6ba2d1d2eb176a6caa07de034025e5775882456ed9c18c339c704d0"
+    },
+    {
+      "path": "src/optimizer.py",
+      "sha256": "52c8b1a6d329e4b0087e42774d061851e53223c62a1bf0ce0c9353da648fa43c"
+    },
+    {
+      "path": "src/parallel_experiment.py",
+      "sha256": "f8eb581bcaaae0b9180cc6f9f94448b7c8cfad81dca3e192c69a7783b3742530"
+    },
+    {
+      "path": "src/regression.py",
+      "sha256": "8baeddd3fe0d30d593fa8e8b91e3af4220ec781250339fcecc800cec7b852c30"
+    },
+    {
+      "path": "src/transpose_experiment.py",
+      "sha256": "a0a9b92ec9afd4bebb0a0891201971d39834b51fa4edb7de29f9495a64e6b59f"
+    },
+    {
+      "path": "src/verification.py",
+      "sha256": "f65a12554544b7feca0a1203fd448f7893ee9a013b2e552200b434e0efbe4d34"
+    },
+    {
+      "path": "experiments/EXPERIMENT_PROTOCOL.md",
+      "sha256": "784ff57bd63bccaa2798d70cd7f31a604584c47649f1c82443277672ff38f866"
+    },
+    {
+      "path": "experiments/gpu_correctness.py",
+      "sha256": "a02a5ecb2227bd6e513db84af2e15850c0438d630976b01d78883a2b5231a292"
+    },
+    {
+      "path": "experiments/opencl_gemm_baseline.py",
+      "sha256": "dc97c2ea3d60c062860223d599d041fadf44427352e0fd034bafea9daabb9332"
+    },
+    {
+      "path": "experiments/opencl_gemm_tiling.py",
+      "sha256": "e56a9739db8dc06ddd478921c75a19498fd832df012903f52e5b92f115b06bd0"
+    },
+    {
+      "path": "experiments/README.md",
+      "sha256": "c6ca8f539185c852424b558f4920622bbfda0eeaae565688d285bfb486b55d65"
+    },
+    {
+      "path": "experiments/run_experiments.py",
+      "sha256": "b62bf906a109514664b676a6655e1d66315b216460ff4d124a80abb261c65f65"
+    },
+    {
+      "path": "experiments/results/gemm_cpu_512x512x512_fp32_20261003_043010.json",
+      "sha256": "ded6b85ff3ec29349018c25ae7e0d7aedcb3ea719380dc5dec57d1f31d2376ad"
+    },
+    {
+      "path": "experiments/results/experiment_005/experiment_005_20261003_145154_292370_correctness.json",
+      "sha256": "182aaddec90f04045dff0f87893e6f145e35cbaeb037d684284b166c9195a783"
+    },
+    {
+      "path": "experiments/results/experiment_005/experiment_005_20261003_145248_372949_report.md",
+      "sha256": "fafe65230997397e0c88842139daa38ffaede3bf0ff241c43bbe7ae5db754288"
+    },
+    {
+      "path": "experiments/results/experiment_005/experiment_005_20261003_145248_372949_run_001.json",
+      "sha256": "5e14001c6b0c8afe4ef1dd22af4cc0e80fba9aa9af64ca936e07d08ee826929b"
+    },
+    {
+      "path": "experiments/results/experiment_005/experiment_005_20261003_145248_372949_run_002.json",
+      "sha256": "39030d4b94675d393adb666c1f49808fa4e0109f4bdd51f97525bde6567b14a4"
+    },
+    {
+      "path": "experiments/results/experiment_005/experiment_005_20261003_145248_372949_run_003.json",
+      "sha256": "0d85a2c73dd7add5913eff641fee984c1ea4ebf09f0223f04f33300f8f1a4624"
+    },
+    {
+      "path": "experiments/results/experiment_005/experiment_005_20261003_145248_372949_summary.json",
+      "sha256": "f207e61543d17cbd3aaefc82d489ca55f47b00e8b9e3cc3403f27760c76dfb58"
+    },
+    {
+      "path": "experiments/results/experiment_004/experiment_004_gpu_correctness.json",
+      "sha256": "a1cb44ba6089bd92a4e7e490df8fc2f22a55c55642435d7a8f30ccdfc5bb4353"
+    },
+    {
+      "path": "experiments/results/experiment_004/experiment_004_report.md",
+      "sha256": "d5507393a70a69e237116651e92742ae06699df2e161e00cd02d50df1bc247ee"
+    },
+    {
+      "path": "experiments/results/experiment_004/local_validation_attempt.json",
+      "sha256": "ed41d21c8561d80c865e3b96ef53f22f1f2b163e6aeef73acc0a465aa2ae2d83"
+    },
+    {
+      "path": "experiments/results/experiment_003/experiment_003_parallelism.json",
+      "sha256": "645b4b18685f3669211dc26aaf560c87e147a6df72167b5a9bd09c119863f877"
+    },
+    {
+      "path": "experiments/results/experiment_003/experiment_003_summary.json",
+      "sha256": "42b2b992a395a89fd5361bbba31be24b07d3cbfe24e2e9331533500dee940f2d"
+    },
+    {
+      "path": "experiments/results/experiment_002/experiment_002_pretransposed_b.json",
+      "sha256": "faf1acebf2887f67f7ce4735c61a0ebbada3453041ac4e4be5dc52e691e9f1d9"
+    },
+    {
+      "path": "experiments/results/experiment_002/experiment_002_summary.json",
+      "sha256": "80c8088a47c3d5d9eefdaced3dc9160cf1fa90f664debbe5be8559a0c84a4119"
+    },
+    {
+      "path": "experiments/results/experiment_001/experiment_000_measurement_validation.json",
+      "sha256": "38c9747aab3d78a3715a6c5cae80e4fc2ebdc101ca3bb31c0b5830e9be437cd8"
+    },
+    {
+      "path": "experiments/results/experiment_001/experiment_001_loop_tiling.json",
+      "sha256": "28539484db2d0f5128760f9714fa2743f77fd36c031256a2d930aced8dd08f16"
+    },
+    {
+      "path": "experiments/results/experiment_001/experiment_001_summary.json",
+      "sha256": "6d3fac6bde3a63e58222ab33cf6b586e65ae8ed55f2e0c503eacf204b357763e"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_plan.json",
+      "sha256": "477b1e5d2d1f8e6b6b1e84d3c31905858b8f00e332cd7639cdd5aee21625ce39"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_report.md",
+      "sha256": "86a3e49ebc62e7d8a350d67056d7aec5336999e77cfb8ffd5cecc6ffd257b261"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_summary.json",
+      "sha256": "67637ec667dcc5bee35e984344a9edfa74871c3fb147831a2a85d355a44ff9da"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_16_run_001.json",
+      "sha256": "b08611dd247cf9718c327d4c2a46753671f51dec2a5c7775ada6c16addf6980d"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_16_run_002.json",
+      "sha256": "d99837f33a784e75bf14a6cd1baf3a5e7ddbdc64edb6722be7cb926c5e2fe848"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_16_run_003.json",
+      "sha256": "c4c7cd98e84eb43b8dfa34544ca10c4b17104437a14e0c97a09adb4cbabf5c34"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_16_summary.json",
+      "sha256": "f02748740423bf495af3ba41aef66278ffda06a9d9f92900a8516d0526f88068"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_32_summary.json",
+      "sha256": "51fdbc32ee8089d81bd812e83591c39eb3e8349d45454f42fc46fe0e05edd7e7"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_8_run_001.json",
+      "sha256": "775714cb58c1377beec266e13b7ca74aa140511232f7f42aedd693f6835e641e"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_8_run_002.json",
+      "sha256": "1f7ae5af9691740fa272ed9fcb9d10906c2771ada8e9e80bbdad4eb314203130"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_8_run_003.json",
+      "sha256": "8d863916a69429db42a1f69b40081dc56d27273e83936480e5e280ef9ae989a9"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_20261003_161254_144008_tile_8_summary.json",
+      "sha256": "a273790f83255b0834034353408225e1d8f22b890f6fb825744c40c35a423395"
+    },
+    {
+      "path": "experiments/results/experiment_006/experiment_006_preservation_manifest.json",
+      "sha256": "ce21500f8895296895573b4acf417526f31e3228b1bc60f5afb6f457a77983c2"
+    },
+    {
+      "path": "tests/test_benchmark.py",
+      "sha256": "faf885f1c07d74cc1dc276510243cc88621e59c96ca1a7a99770c76320d84250"
+    },
+    {
+      "path": "tests/test_capabilities.py",
+      "sha256": "fe8f5125e16c894bd544888278fb66e77416ee32f763d0b469a5933d6dc3cac6"
+    },
+    {
+      "path": "tests/test_diagnosis.py",
+      "sha256": "3ae206c930df1d3ddf0ab39c603e5581f4c7f55194f1d9ddec6d29ecb7a89b7a"
+    },
+    {
+      "path": "tests/test_environment.py",
+      "sha256": "c9175f32458d8797e6d04bbef2625cb685974440db9a0e479b834b9dd4e568d2"
+    },
+    {
+      "path": "tests/test_experiment.py",
+      "sha256": "982d6dffc3a32504f7e442a9cca23ace3387deaa4af1cb26984900ce2ebbbc50"
+    },
+    {
+      "path": "tests/test_gpu_correctness.py",
+      "sha256": "94d54a374903a060244865fc888b15833877f5abedfb1c8b03ca845959912700"
+    },
+    {
+      "path": "tests/test_hardware.py",
+      "sha256": "315be090516e7a248678e3449287da53c70c87f42433511acbb5a83a0d9b7941"
+    },
+    {
+      "path": "tests/test_opencl_gemm_baseline.py",
+      "sha256": "f2fdd294c3063b07f727fcfd4f1129c4211127dfd944eaf8a0bb9a33431b89fd"
+    },
+    {
+      "path": "tests/test_opencl_gemm_tiling.py",
+      "sha256": "5722253f3712884f3598f8e70929c9393cac7e85530f660b8d2fb9f9704eaefc"
+    },
+    {
+      "path": "tests/test_optimizer.py",
+      "sha256": "7867e002b322ce53a2c70fccd6d2c238f8187a8fc21477a26b515a26214136b4"
+    },
+    {
+      "path": "tests/test_parallel_experiment.py",
+      "sha256": "9b56b4ba672c0ea0ad5f9dc1c1b42d7c1304e2ce10eaa237b843861366bf7edc"
+    },
+    {
+      "path": "tests/test_regression.py",
+      "sha256": "a9f0cee040d8625a7641698d4065f98e66f90eb187600ba08ed78c67bc880375"
+    },
+    {
+      "path": "tests/test_tiling_experiment.py",
+      "sha256": "e6108ef3afb115d1a3c8237a70386f105aff1c0b1acb28690f459aa231ad9f57"
+    },
+    {
+      "path": "tests/test_transpose_experiment.py",
+      "sha256": "894b30fada304c6ad08e02f69d53239aa7300b7da01636d6e662bd3467ccdcb8"
+    },
+    {
+      "path": "tests/test_verification.py",
+      "sha256": "bf826b1d7fd11ea4af92616dcd7dfe8d6d04929c72b23d7c1316c746a6d4bca4"
+    }
+  ]
+}

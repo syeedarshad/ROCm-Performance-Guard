@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "experiment-004-gpu-correctness",
+  "experiment_name": "RTX 2050 GPU correctness validation",
+  "status": "USER_REPORTED",
+  "gpu_name": "NVIDIA GeForce RTX 2050",
+  "workload": "GEMM: C = A @ B",
+  "M": 512,
+  "N": 512,
+  "K": 512,
+  "precision": "FP32",
+  "max_absolute_error": 0.000053405761719,
+  "mean_absolute_error": 0.0000048291999519,
+  "max_relative_error": 0.020715631547,
+  "mean_relative_error": 0.0000018085577267,
+  "allowed_atol": 0.001,
+  "allowed_rtol": 0.001,
+  "result": "PASS",
+  "timestamp": "2026-10-03 14:28:43 UTC",
+  "timestamp_kind": "artifact_recorded_utc; original execution time unknown",
+  "execution_timestamp": null,
+  "provenance": "User-supplied RTX 2050 correctness output; not independently reproduced on this host",
+  "environment": {
+    "execution_environment": {
+      "gpu_name": "NVIDIA GeForce RTX 2050",
+      "os": null,
+      "python_version": null,
+      "pytorch_version": null,
+      "cuda_version": null,
+      "driver_version": null,
+      "tensor_device": null
+    },
+    "recording_environment": {
+      "distribution": "Ubuntu-24.04 (WSL)",
+      "python_version": "3.13.16",
+      "pytorch_installed_in_project_venv": false
+    }
+  },
+  "original_input_generation": null,
+  "original_cpu_reference_implementation": null,
+  "original_relative_error_definition": null,
+  "limitations": [
+    "Original inputs, elementwise outputs, CPU reference implementation and run environment were not supplied.",
+    "The new script uses the existing benchmark deterministic generator; it cannot guarantee reproduction of the original error values.",
+    "This is an NVIDIA GPU correctness result, not AMD/ROCm execution or performance evidence."
+  ]
+}

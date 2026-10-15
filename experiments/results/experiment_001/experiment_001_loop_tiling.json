@@ -1,0 +1,282 @@
+{
+  "experiment_id": "experiment-001-loop-tiling",
+  "experiment_name": "Loop Tiling / Cache Blocking",
+  "schema_version": "1.0",
+  "description": "Evaluate loop tiling optimization for pure-Python CPU GEMM across tile sizes",
+  "baseline_result_reference": {
+    "file": "experiments/results/gemm_cpu_512x512x512_fp32_20261003_043010.json",
+    "median_ms": 1342.067,
+    "p95_ms": 1406.937,
+    "gflops": 0.2
+  },
+  "candidate_configuration": {
+    "algorithm": "tiled_gemm",
+    "m": 512,
+    "n": 512,
+    "k": 512,
+    "dtype": "fp32",
+    "backend": "cpu",
+    "warmup_runs": 5,
+    "measurement_runs": 30,
+    "tile_sizes": [
+      16,
+      32,
+      64,
+      128
+    ]
+  },
+  "tile_sizes_tested": [
+    16,
+    32,
+    64,
+    128
+  ],
+  "results": [
+    {
+      "tile_size": 16,
+      "latency_ms": {
+        "count": 30,
+        "median": 2004.551,
+        "mean": 2001.994,
+        "min": 1937.948,
+        "max": 2102.045,
+        "p95": 2070.222,
+        "p99": 2095.799,
+        "stddev": 46.214,
+        "cv_percent": 2.31
+      },
+      "throughput": {
+        "gflops": 0.133913,
+        "operations": 268435456
+      },
+      "comparison": {
+        "baseline_median_ms": 1342.067,
+        "candidate_median_ms": 2004.551,
+        "speedup": 0.6695,
+        "improvement_percent": -49.36,
+        "verification_status": "REGRESSED"
+      },
+      "raw_durations_ns": [
+        1979457262,
+        1987407532,
+        1979764734,
+        2011993336,
+        2045881404,
+        1937947674,
+        2036190744,
+        2013510152,
+        2047462679,
+        2047746448,
+        2080504627,
+        2102045338,
+        2032982957,
+        2006346617,
+        2051439502,
+        1959273880,
+        1941322705,
+        1943853421,
+        2005651465,
+        1946984039,
+        1949103356,
+        1967629558,
+        2057655235,
+        1939038921,
+        1984507461,
+        1992208400,
+        2034234221,
+        2003450075,
+        2035484752,
+        1938730804
+      ],
+      "timestamp": "2026-10-03T09:15:32.439447+00:00"
+    },
+    {
+      "tile_size": 32,
+      "latency_ms": {
+        "count": 30,
+        "median": 1698.518,
+        "mean": 1691.873,
+        "min": 1563.224,
+        "max": 1845.482,
+        "p95": 1807.298,
+        "p99": 1834.524,
+        "stddev": 74.447,
+        "cv_percent": 4.38
+      },
+      "throughput": {
+        "gflops": 0.158041,
+        "operations": 268435456
+      },
+      "comparison": {
+        "baseline_median_ms": 1342.067,
+        "candidate_median_ms": 1698.518,
+        "speedup": 0.7901,
+        "improvement_percent": -26.56,
+        "verification_status": "REGRESSED"
+      },
+      "raw_durations_ns": [
+        1709838098,
+        1602082261,
+        1712674462,
+        1630332142,
+        1691889366,
+        1766311673,
+        1605915391,
+        1709692731,
+        1665439299,
+        1637201359,
+        1630509163,
+        1563223932,
+        1705145981,
+        1615638324,
+        1750538373,
+        1724670285,
+        1618603396,
+        1663147440,
+        1605907222,
+        1641550365,
+        1733254679,
+        1794853261,
+        1666650478,
+        1720007897,
+        1607139198,
+        1807695759,
+        1802435668,
+        1721533894,
+        1806811416,
+        1845481682
+      ],
+      "timestamp": "2026-10-03T09:16:31.493177+00:00"
+    },
+    {
+      "tile_size": 64,
+      "latency_ms": {
+        "count": 30,
+        "median": 1512.616,
+        "mean": 1520.294,
+        "min": 1465.955,
+        "max": 1609.12,
+        "p95": 1584.343,
+        "p99": 1603.369,
+        "stddev": 32.647,
+        "cv_percent": 2.16
+      },
+      "throughput": {
+        "gflops": 0.177464,
+        "operations": 268435456
+      },
+      "comparison": {
+        "baseline_median_ms": 1342.067,
+        "candidate_median_ms": 1512.616,
+        "speedup": 0.8872,
+        "improvement_percent": -12.71,
+        "verification_status": "REGRESSED"
+      },
+      "raw_durations_ns": [
+        1498498980,
+        1529768060,
+        1589288564,
+        1511185128,
+        1465955171,
+        1509820958,
+        1524090223,
+        1544770737,
+        1531663728,
+        1527212541,
+        1490174355,
+        1534024123,
+        1490335702,
+        1503365764,
+        1512119290,
+        1494775646,
+        1513112340,
+        1578299229,
+        1498465319,
+        1488979601,
+        1522066852,
+        1478008090,
+        1532423598,
+        1578135897,
+        1609120385,
+        1503706914,
+        1517542305,
+        1514410014,
+        1511845864,
+        1505669224
+      ],
+      "timestamp": "2026-10-03T09:17:24.324970+00:00"
+    },
+    {
+      "tile_size": 128,
+      "latency_ms": {
+        "count": 30,
+        "median": 1492.932,
+        "mean": 1497.166,
+        "min": 1419.383,
+        "max": 1623.888,
+        "p95": 1584.815,
+        "p99": 1614.903,
+        "stddev": 56.388,
+        "cv_percent": 3.78
+      },
+      "throughput": {
+        "gflops": 0.179804,
+        "operations": 268435456
+      },
+      "comparison": {
+        "baseline_median_ms": 1342.067,
+        "candidate_median_ms": 1492.932,
+        "speedup": 0.8989,
+        "improvement_percent": -11.24,
+        "verification_status": "REGRESSED"
+      },
+      "raw_durations_ns": [
+        1592906435,
+        1517877226,
+        1419382729,
+        1457370928,
+        1443660267,
+        1555127625,
+        1574237763,
+        1533494550,
+        1557690386,
+        1623888195,
+        1532758450,
+        1485152991,
+        1450316507,
+        1467221368,
+        1500711332,
+        1480023803,
+        1517226878,
+        1519123027,
+        1442060088,
+        1431190441,
+        1438488618,
+        1460174720,
+        1428718557,
+        1462553332,
+        1504510309,
+        1574924921,
+        1506141668,
+        1563936019,
+        1445179260,
+        1428937257
+      ],
+      "timestamp": "2026-10-03T09:18:16.357330+00:00"
+    }
+  ],
+  "summary": {
+    "best_tile_size": 128,
+    "best_median_ms": 1492.932,
+    "best_gflops": 0.179804,
+    "best_speedup": 0.8989,
+    "best_improvement_percent": -11.24,
+    "best_verification_status": "REGRESSED"
+  },
+  "environment": {
+    "python_version": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "linux",
+    "cpu_cores": 16
+  },
+  "timestamp": "2026-10-03T09:18:16.357612+00:00"
+}

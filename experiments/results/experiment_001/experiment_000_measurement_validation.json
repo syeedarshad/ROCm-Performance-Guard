@@ -1,0 +1,81 @@
+{
+  "experiment_id": "experiment-000-measurement-validation",
+  "experiment_name": "Measurement Validation",
+  "description": "Multiple independent baseline benchmark runs to assess measurement stability",
+  "configuration": {
+    "m": 512,
+    "n": 512,
+    "k": 512,
+    "dtype": "fp32",
+    "backend": "cpu",
+    "warmup_runs": 5,
+    "measurement_runs": 30,
+    "num_independent_runs": 3,
+    "workers": "auto-detect"
+  },
+  "locked_baseline_reference": {
+    "median_ms": 1342.067,
+    "p95_ms": 1406.937,
+    "gflops": 0.2
+  },
+  "runs": [
+    {
+      "run_number": 1,
+      "median_ms": 1323.790316,
+      "mean_ms": 1330.3408104,
+      "p95_ms": 1411.8805696499999,
+      "p99_ms": 1434.50457813,
+      "min_ms": 1258.46395,
+      "max_ms": 1438.452639,
+      "stddev_ms": 46.055309497361385,
+      "count": 30,
+      "gflops": 0.20277792695380314,
+      "timestamp": "2026-10-03T09:12:49.830248+00:00"
+    },
+    {
+      "run_number": 2,
+      "median_ms": 1305.428281,
+      "mean_ms": 1301.9267022333333,
+      "p95_ms": 1372.02077885,
+      "p99_ms": 1427.0368485200001,
+      "min_ms": 1207.89478,
+      "max_ms": 1448.70368,
+      "stddev_ms": 54.68571022924573,
+      "count": 30,
+      "gflops": 0.20563018275838932,
+      "timestamp": "2026-10-03T09:13:35.096553+00:00"
+    },
+    {
+      "run_number": 3,
+      "median_ms": 1329.600484,
+      "mean_ms": 1343.6340939666666,
+      "p95_ms": 1405.30892275,
+      "p99_ms": 1409.9526104099998,
+      "min_ms": 1258.623029,
+      "max_ms": 1411.200095,
+      "stddev_ms": 36.185455529272446,
+      "count": 30,
+      "gflops": 0.2018918157975039,
+      "timestamp": "2026-10-03T09:14:22.313018+00:00"
+    }
+  ],
+  "stability_analysis": {
+    "medians": [
+      1323.790316,
+      1305.428281,
+      1329.600484
+    ],
+    "median_of_medians_ms": 1323.790316,
+    "mean_of_medians_ms": 1319.6063603333334,
+    "stddev_of_medians_ms": 12.617565661956254,
+    "cv_percent": 0.96,
+    "range_ms": 24.17220300000008,
+    "range_percent": 1.83,
+    "locked_baseline_median_ms": 1342.067,
+    "deviation_from_locked_ms": 18.277,
+    "deviation_from_locked_percent": 1.36,
+    "is_stable": true,
+    "stability_conclusion": "STABLE: Measurement variance (CV=1.0%) is within acceptable bounds. Baseline deviation from locked reference is 1.4%. Baseline is sufficiently stable for optimization experiments."
+  },
+  "timestamp": "2026-10-03T09:14:22.313303+00:00"
+}

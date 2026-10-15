@@ -1,0 +1,72 @@
+{
+  "experiment_id": "experiment-002-pretransposed-b",
+  "experiment_name": "Pre-Transposed Matrix B Memory Locality",
+  "timestamp": "2026-10-03T10:21:27.154053+00:00",
+  "baseline_reference": {
+    "file": "experiments/results/gemm_cpu_512x512x512_fp32_20261003_043010.json",
+    "median_ms": 1342.067,
+    "p95_ms": 1406.937,
+    "gflops": 0.2,
+    "backend": "cpu",
+    "note": "Locked baseline utilized multi-worker execution on Ryzen 7 7730U"
+  },
+  "workload": {
+    "m": 512,
+    "n": 512,
+    "k": 512,
+    "dtype": "fp32",
+    "backend": "cpu",
+    "warmup_runs": 5,
+    "measurement_runs": 30,
+    "num_independent_runs": 3,
+    "flops": 268435456
+  },
+  "candidate_configuration": {
+    "name": "pretransposed_b",
+    "optimization": "pre-transposed matrix B layout",
+    "parallelism": "single_threaded (no multiprocessing)",
+    "loop_tiling": "none",
+    "transpose_implementation": "list(map(list, zip(*b)))",
+    "kernel": "sum(map(operator.mul, a_row, b_col)) over transposed B"
+  },
+  "transpose_time_ms": 9.175,
+  "steady_state_metrics": {
+    "median_ms": 7186.722,
+    "mean_ms": 7253.072,
+    "p95_ms": 7713.989,
+    "p99_ms": 8003.891,
+    "min_ms": 6815.287,
+    "max_ms": 8114.67,
+    "stddev_ms": 171.251,
+    "cv_percent": 2.36,
+    "gflops": 0.037352
+  },
+  "end_to_end_metrics": {
+    "median_ms": 7195.897,
+    "mean_ms": 7262.247,
+    "p95_ms": 7723.164,
+    "p99_ms": 8013.066,
+    "min_ms": 6824.462,
+    "max_ms": 8123.845,
+    "stddev_ms": 171.251,
+    "gflops": 0.037304
+  },
+  "speedup": {
+    "steady_state": 0.1867,
+    "end_to_end": 0.1865
+  },
+  "improvement_percentage": {
+    "steady_state": -435.5,
+    "end_to_end": -436.18
+  },
+  "verification_status": {
+    "steady_state": "REGRESSED",
+    "end_to_end": "REGRESSED"
+  },
+  "final_decision": "REJECT",
+  "environment_snapshot": {
+    "python_version": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "linux",
+    "cpu_cores": 16
+  }
+}

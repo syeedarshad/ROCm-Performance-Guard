@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "experiment-004-gpu-correctness",
+  "experiment_name": "RTX 2050 GPU correctness validation",
+  "status": "UNAVAILABLE",
+  "result": "NOT_RUN",
+  "gpu_name": null,
+  "expected_gpu_name": "NVIDIA GeForce RTX 2050",
+  "workload": "GEMM: C = A @ B",
+  "M": 512,
+  "N": 512,
+  "K": 512,
+  "precision": "FP32",
+  "allowed_atol": 0.001,
+  "allowed_rtol": 0.001,
+  "max_absolute_error": null,
+  "mean_absolute_error": null,
+  "max_relative_error": null,
+  "mean_relative_error": null,
+  "timestamp": "2026-10-03T14:29:09.844525+00:00",
+  "timestamp_kind": "execution_attempt",
+  "provenance": "script_execution",
+  "tensor_device": null,
+  "reference_device": "cpu",
+  "input_generation": "src.benchmark.generate_deterministic_matrix; A offset=1, B offset=2",
+  "relative_error_definition": "abs(actual-reference)/max(abs(reference), 1e-12)",
+  "environment": {
+    "python_version": "3.13.16",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39"
+  },
+  "reason": "PyTorch unavailable: No module named 'torch'"
+}
