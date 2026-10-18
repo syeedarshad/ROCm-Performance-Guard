@@ -29,3 +29,9 @@ These tests assume Linux/WSL (/proc/meminfo and a WSL environment) and fail on n
 ## Not verified
 - Linux/WSL behavior (suite not run in Ubuntu/WSL)
 - AMD GPU performance and native ROCm/HIP compatibility
+
+## Update: hardware tests made platform-aware
+- Changed tests/test_hardware.py (adds import sys; updates 3 tests). On Linux the original strict assertions are kept (visible memory is a positive int, WSL v2 check inside WSL). On native Windows, Linux-only fields may be None, and WSL must be reported as False and match is_running_in_wsl().
+- Final result on Windows 11, Python 3.13.0: 329 run, 329 passed, 0 failed (final_unit_tests.txt).
+- Not verified: the Linux/WSL branches of these tests were not run on Ubuntu/WSL. Please run the suite there before merging.
+- No source code, expected hashes, or experiment results were edited.
