@@ -6,6 +6,14 @@ ROCm Performance Guard records benchmark results, checks whether comparisons are
 
 **Current status:** Experiment 7 is the retained GPU configuration: an 8×8 tiled, column-first OpenCL FP32 GEMM on AMD Radeon `gfx90c`. Experiment 8 rejected explicit inner-loop unrolling. Native ROCm/HIP GEMM execution is not implemented; the validated AMD GPU path is **native Windows OpenCL**.
 
+**Team:** Syeed Arshad and Noorbasha Ayesha.
+
+| Evidence track | Demonstrated scope |
+|---|---|
+| Local AMD Radeon `gfx90c` | Actual native Windows OpenCL GEMM; E7 retained, E8 rejected |
+| AMD Developer Cloud, reported MI300X VF (`gfx942`) | 169 selected tests, capability detection and a small CPU smoke benchmark |
+| Native project ROCm/HIP GEMM | Not implemented; no project MI300X GEMM measurements |
+
 ## Why performance needs a guard
 
 A lower timing number is not automatically an improvement. Background activity, warm-up effects, changed inputs, different hardware, numerical errors and measurement boundaries can all invalidate a comparison. An optimization can also reduce median latency while worsening tail latency.
@@ -148,9 +156,57 @@ All **600 measured outputs** passed correctness: 150 control outputs and 450 can
 
 Full statistics, raw event timestamps, per-output correctness diagnostics and decisions are in the [E8 summary](experiments/results/experiment_008/experiment_008_20261003_171954_340824_summary.json) and adjacent run files. No end-to-end speedup claim is made.
 
+## AMD Developer Cloud validation
+
+On 17 October 2026, **169 selected tests passed** at commit `f1908817aa0f7b274ad49b358e47b18e7f640f5c`. **This was not a full-suite run.** The cloud checkout reported no working-tree changes after those runs.
+
+The AMD Developer Cloud environment reported an **AMD Instinct MI300X virtual function (`gfx942`)**, Ubuntu 24.04.5 LTS and ROCm 10.1.0. The saved capability log records `/dev/kfd`, `/dev/dri`, `rocminfo`, `hipcc`, `amd-smi` and `rocm-smi` as available. Python was 3.12.3. Device identity and the standalone HIP result below come from the separately reported cloud setup; capability detection alone does not prove GPU execution.
+
+### Selected test evidence
+
+| Module / validation | Passed | Evidence log |
+|---|---:|---|
+| Regression | 22 | `regression_tests_knzD5T.log` |
+| Diagnosis | 26 | `diagnosis_tests_rRwaK5.log` |
+| Verification | 38 | `verification_tests_doJXNC.log` |
+| Optimizer | 31 | `optimizer_tests_gp7qCy.log` |
+| Capabilities | 14 | `capability_tests_yhDrTz.log` |
+| Hardware, selected | 11 | `hardware_tests_afZlEZ.log` |
+| Environment, selected | 9 | `environment_tests_5UT64j.log` |
+| CPU GEMM correctness, 2×2 | 1 | `cpu_correctness_7LfCAE.log` |
+| Additional benchmark tests, selected | 17 | `benchmark_tests_jCfLHl.log` |
+| **Total selected tests** | **169** | **All recorded test exit codes: 0** |
+
+Four tests were deliberately excluded, not recorded as observed failures:
+
+- `test_hardware.TestHardwareDetection.test_wsl_detection_in_current_environment` requires WSL2; the cloud host runs native Linux.
+- `test_environment.TestEnvironmentDetection.test_missing_external_commands_handled_safely` mocks command discovery but leaves `/opt/rocm` filesystem checks active.
+- `test_benchmark.TestBenchmarkEngine.test_09_unavailable_rocm_backend` assumes ROCm is absent.
+- `test_benchmark.TestBenchmarkEngine.test_12_cli_unavailable_rocm` expects the absent-runtime CLI error path.
+
+Other experiment/GPU test modules were not run in this cloud validation sequence. Selected tests establish the exercised analysis, planning, detection and CPU benchmark behavior, not universal hardware compatibility.
+
+### CPU smoke test and separate HIP demonstration
+
+The CPU CLI completed a 32×32×32 smoke workload with one worker, one warm-up and two measured iterations, using `--no-save`. Recorded median latency was **1.197 ms** and the exit code was 0 (`cpu_smoke_K6xRm2.log`). A separate check confirmed valid JSON, matching configuration and both snapshots (`cpu_smoke_verification_eMfbrZ.log`). These are additional checks, not extra unit tests. Two timing samples do not establish stable performance, and this CPU backend uses Python floats despite its FP32 label.
+
+A **separate standalone HIP vector-add test passed**, as reported during cloud setup: all 1,048,576 outputs matched 4.0. This was not the project's GEMM implementation. Its original output is separate from the archived project-validation logs.
+
+**Native project ROCm/HIP GEMM is not implemented.** `RocmGemmBackend.is_available()` checks device/tool presence, but `prepare()` raises `NotImplementedError` even when those checks pass. The capability detector can report ROCm available from tool presence alone. Neither behavior establishes usable project GPU execution. **No project GEMM correctness or performance result on MI300X is claimed.**
+
+### Evidence provenance
+
+The 18-file validation archive contains test logs and source inspections. Its SHA256 matched after download:
+
+```text
+08ded83754f15ade40c9ba225521938c7a9ef52cf982d8a534a5ea0b37ad5087
+```
+
+These cloud logs are retained separately from the repository's historical experiment results and are not linked as public artifacts here. The archive includes environment paths and should undergo privacy review before publication. The checksum identifies the archive; it does not independently prove test correctness or repository integrity. The reported clean Git status is not a new byte-for-byte audit of all historical artifacts.
+
 ## Installation and setup
 
-Use Python 3.13 to match the recorded environments. Run commands from the repository root. The CPU toolkit, OpenCL runners and unit tests use the Python standard library; there is no `requirements.txt`, `pyproject.toml` or installable package configuration, and no pip installation is needed for those paths.
+Historical local experiments used Python 3.13; the selected cloud validation used Python 3.12.3. These are observed environments, not a claim that every Python version or platform is supported. Run commands from the repository root. The CPU toolkit, OpenCL runners and unit tests use the Python standard library; there is no `requirements.txt`, `pyproject.toml` or installable package configuration, and no pip installation is needed for those paths.
 
 Linux/WSL:
 
@@ -177,44 +233,63 @@ These commands are verified against the source interfaces. Documentation prepara
 
 ```bash
 python -B -m src.benchmark --help
-python -B -m src.benchmark --backend cpu --m 512 --n 512 --k 512 --dtype fp32 --warmup 5 --iterations 30 --no-save
+python -B -m src.benchmark --backend cpu --m 32 --n 32 --k 32 --workers 1 --warmup 1 --iterations 2 --no-save
 ```
 
-Omit `--no-save` to persist a new result; the benchmark writer avoids existing filenames. The CLI accepts `rocm`/`hip`, but their execution backend is a placeholder, not a usable GPU benchmark.
+The small command above matches the cloud smoke workload and executes on the CPU. To save a new result, explicitly choose a separate `--output-dir` and omit `--no-save`; otherwise the default destination is `experiments/results`. Keep new validation outputs outside historical evidence directories. The CLI accepts `rocm`/`hip`, but their execution backend is a placeholder, not a usable GPU benchmark.
 
-### Native Windows OpenCL baseline
-
-On the validated AMD `gfx90c` Windows environment:
-
-```powershell
-python -B experiments/opencl_gemm_baseline.py --correctness-only
-python -B experiments/opencl_gemm_baseline.py
-```
-
-The first command checks correctness; the second runs the full E5 protocol. Both save new timestamped evidence using exclusive creation. They do not replace the retained E7 configuration.
-
-### Historical optimization replay and integrity checks
-
-The original full experiment entry points are:
-
-```powershell
-python -B experiments/opencl_gemm_tiling.py
-python -B experiments/opencl_gemm_mapping.py
-python -B experiments/opencl_gemm_unrolling.py
-```
-
-**These historical runners intentionally stop in this documented checkout:** their preservation manifests include the original root `README.md`, whose bytes changed during this documentation update. The expected error is `Immutable file changed: README.md`. The historical manifests and evidence have not been rewritten to hide that change. Exact replay requires the original manifest-matching snapshot; a separate compatibility/reproduction runner is future work. Do not bypass or regenerate the historical checks to make a new run appear identical.
-
-The older CPU runners also use fixed output paths. Do not rerun `experiments/run_experiments.py` or the historical CPU experiment entry points against the preserved results directory: they can overwrite evidence.
-
-### Tests
+### Detection and analysis demos
 
 ```bash
-python -B -m unittest discover -s tests -v
-python -B -m unittest discover -s tests -p "test_opencl_gemm_unrolling.py" -v
+python -B -m src.capabilities
+python -B -m src.regression
+python -B -m src.diagnosis
+python -B -m src.optimizer
 ```
 
-The E8 report records **15/15 focused tests** on native Windows and **329/329 full-suite tests** in WSL at the time of that experiment. These are historical results, not a fresh test run or CI status. Mocked OpenCL tests verify logic without a GPU; actual hardware validation comes from the saved GPU executions.
+Capability detection queries existing device interfaces and tools. The three analysis entry points print synthetic demonstrations; they do not run GPU GEMM or apply optimization recommendations. Snapshots can contain local paths and selected environment-variable values. Review them before sharing.
+
+### Native Windows OpenCL and historical replay
+
+`experiments/opencl_gemm_baseline.py` provides `--correctness-only` and the full E5 benchmark entry point. Both require the validated native Windows AMD runtime and create new timestamped files in the historical results tree. They are not read-only demonstrations and are not part of the cloud validation instructions.
+
+The preservation manifests for **E6, E7 and E8** all record the original `README.md` SHA256:
+
+```text
+ca360b824620463e3624473632b95ec5d24d0b0afdd7a76482dfc26f316575f9
+```
+
+The documented README already differed from those bytes before this update. This update also does not match that historical snapshot.
+
+| Runner | Integrity behavior relevant to this README |
+|---|---|
+| `experiments/opencl_gemm_mapping.py` (E7) | `verify_preserved()` enforces its manifest and rejects changed README bytes |
+| `experiments/opencl_gemm_unrolling.py` (E8) | `verify_preserved()` enforces its manifest and rejects changed README bytes |
+| `experiments/opencl_gemm_tiling.py` (E6) | Its manifest records the old README, but the runner checks the locked CPU/E5 baselines rather than enforcing that manifest |
+| `experiments/opencl_gemm_baseline.py` (E5) | Checks the locked CPU baseline; does not hash the README |
+
+E7/E8 full entry points are expected to stop with `Immutable file changed: README.md`. This conclusion follows from source/hash inspection, not a new experiment run. Exact historical replay requires the original manifest-matching files. **Do not disable checks or regenerate manifests to hide documentation changes.** E6 is not made safe to rerun merely because it lacks this README check.
+
+The older CPU runners use fixed output paths. Do not rerun `experiments/run_experiments.py` or historical CPU entry points against preserved results: they can overwrite evidence. A separate portable reproduction runner remains future work.
+
+### Testing and reproducibility
+
+A focused analysis test command exercised during cloud validation is:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s tests -p 'test_regression.py' -v
+```
+
+On native Windows PowerShell, set bytecode suppression for the process and any child Python CLI tests:
+
+```powershell
+$env:PYTHONDONTWRITEBYTECODE = "1"
+python -B -m unittest discover -s tests -p "test_regression.py" -v
+```
+
+Inspect test side effects and host assumptions before broader discovery. The cloud selections excluded the four tests listed above; they did not modify test source or imply that unrun tests passed. Persistence tests used temporary storage outside the repository.
+
+The E8 report separately records **15/15 focused tests** on native Windows and **329/329 full-suite tests** in WSL at the time of that experiment. These are historical results, not the cloud count, a fresh run or CI status. Mocked OpenCL tests validate logic without executing GPU kernels. Actual local GPU evidence comes from the saved OpenCL runs. This README update did not execute tests or benchmarks.
 
 ## Hardware and compatibility
 
@@ -224,7 +299,8 @@ The E8 report records **15/15 focused tests** on native Windows and **329/329 fu
 | Native Windows AMD OpenCL | Actual GEMM execution validated on `gfx90c`; current selection requires AMD vendor, exact device name and one matching GPU |
 | Other AMD OpenCL devices | Kernel portability is plausible, but discovery is deliberately restricted; no validation claim |
 | Linux/WSL OpenCL | Current runner rejects non-Windows hosts and loads `System32/OpenCL.dll` |
-| Native ROCm/HIP | Capability probes and a backend placeholder exist; GEMM execution is not implemented or validated |
+| AMD Developer Cloud MI300X VF | Reported `gfx942`; capability checks and 169 selected tests at the stated commit; separate standalone HIP vector-add passed |
+| Native project ROCm/HIP | Capability probes and a backend placeholder exist; GEMM execution is not implemented or validated |
 | RTX 2050 | Separate supplied correctness observation; not the AMD target, and not locally reproduced |
 
 The recorded device exposes a maximum work-group size of 256 and 32 KiB local memory. The compiled retained kernel reports a maximum group size of 64, preferred multiple 64, required group `[8, 8, 1]` and 512 bytes local memory. Legality is checked against both device and compiled-kernel limits. Reported global memory includes shared system memory and is not dedicated VRAM.
@@ -243,7 +319,7 @@ OpenCL and HIP are different APIs. An AMD GPU, a runtime DLL, a detected tool or
 
 ## Contributing
 
-Propose a focused change with its hypothesis, hardware/runtime requirements and validation plan. Keep source, correctness and timing changes independently reviewable. Run relevant focused tests and the complete suite, report actual outcomes, and retain failed candidates as evidence.
+Propose a focused change with its hypothesis, hardware/runtime requirements and validation plan. Keep source, correctness and timing changes independently reviewable. Inspect test side effects and platform assumptions, run appropriate focused checks, and report failures, exclusions and unrun coverage. Run the complete suite only in a suitable reviewed environment. Retain failed candidates as evidence.
 
 Do not edit locked baselines, raw measurements or historical preservation manifests. Save new experiments separately, identify the actual device/runtime, and distinguish measured results from expectations. Review generated snapshots before publishing them; avoid including credentials or private machine information.
 
@@ -253,4 +329,4 @@ This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Ar
 
 ## Hackathon context
 
-Prepared as an AMD Developer Hackathon project. The engineering focus is trustworthy measurement and evidence-based optimization, including negative results. The current demonstrated AMD execution is Windows OpenCL; validation on supported ROCm hardware remains future work. Participation does not imply AMD endorsement or official affiliation.
+Prepared as an AMD Developer Hackathon project. The engineering focus is trustworthy measurement and evidence-based optimization, including negative results. The demonstrated project GPU execution is Windows OpenCL. AMD Developer Cloud validation covers the selected tests and CPU smoke path described above; native project ROCm/HIP GEMM remains future work. Participation does not imply AMD endorsement or official affiliation.
