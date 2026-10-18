@@ -1,0 +1,2 @@
+# Preserve historical evidence byte-for-byte on every platform (no line-ending conversion)
+experiments/results/** -text
