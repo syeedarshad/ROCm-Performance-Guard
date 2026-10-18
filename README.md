@@ -325,7 +325,7 @@ Do not edit locked baselines, raw measurements or historical preservation manife
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Arshad S.
+This project is licensed under the [MIT License](LICENSE). Copyright (c) 2026 Syeed Arshad .
 
 ## Hackathon context
 
